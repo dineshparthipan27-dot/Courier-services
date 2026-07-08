@@ -1,7 +1,7 @@
 /* ===============================
    Premium Auth Logic
 =============================== */
-// Sliding Pill Tabs Logic
+ 
 const btnLogin = document.getElementById('btnShowLogin');
 const btnSignup = document.getElementById('btnShowSignup');
 const pillSlider = document.getElementById('pillSlider');
@@ -24,7 +24,7 @@ btnSignup.addEventListener('click', () => {
     loginForm.classList.remove('active-form');
 });
 
-// Password Toggle Logic
+ 
 document.querySelectorAll(".toggle-pwd").forEach(icon => {
     icon.addEventListener("click", () => {
         const input = icon.previousElementSibling;
@@ -38,7 +38,7 @@ document.querySelectorAll(".toggle-pwd").forEach(icon => {
     });
 });
 
-// Validation Helpers
+ 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function showError(inputId, errorId, msg) {
     const input = document.getElementById(inputId);
@@ -53,14 +53,14 @@ function clearError(inputId, errorId) {
     document.getElementById(errorId).style.display = "none";
 }
 
-// Button Loader
+ 
 function loading(btn, text) {
     btn.disabled = true;
     btn.dataset.original = btn.innerHTML;
     btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> ${text}`;
 }
 
-// Login Submit
+ 
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let isValid = true;
@@ -93,7 +93,7 @@ loginForm.addEventListener("submit", (e) => {
     }, 1500);
 });
 
-// Signup Submit
+ 
 signupForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let isValid = true;
@@ -114,7 +114,7 @@ signupForm.addEventListener("submit", (e) => {
     loading(btn, "Creating Account...");
 
     setTimeout(() => {
-        // alert("Welcome to SpeedX! Account Created.");
+ 
         btn.innerHTML = btn.dataset.original;
         btn.disabled = false;
         signupForm.reset();

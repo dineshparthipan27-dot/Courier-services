@@ -5,7 +5,7 @@
   position: relative;
   min-height: 80vh;
   padding: 140px 5% 100px;
-  background-color: #030712; /* Deep Dark Space */
+  background-color: #030712;  
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -24,7 +24,7 @@
   width: 100%;
 }
 
-/* --- LEFT SIDE: Content --- */
+ 
 .blog-hero-content {
   flex: 1.1;
   text-align: left;
@@ -61,7 +61,7 @@
   max-width: 90%;
 }
 
-/* Search Box */
+ 
 .blog-search-box {
   display: flex;
   background: rgba(255, 255, 255, 0.05);
@@ -104,7 +104,7 @@
   transform: rotate(15deg) scale(1.1);
 }
 
-/* --- RIGHT SIDE: Visuals --- */
+ 
 .blog-hero-visual {
   flex: 0.9;
   position: relative;
@@ -132,7 +132,7 @@
   50% { transform: translateY(-20px); }
 }
 
-/* Floating "New Post" Card */
+ 
 .float-article-card {
   position: absolute;
   bottom: 20px;
@@ -182,7 +182,7 @@
   100% { transform: translateX(0); }
 }
 
-/* Mobile Responsiveness */
+ 
 @media (max-width: 900px) {
   .blog-hero-container {
     flex-direction: column;
@@ -202,7 +202,7 @@
 .featured-blog-section { 
   padding: 80px 5%; 
   background-color: #F8F9FA; 
-  margin-top: -80px; /* Pulls it up over the dark hero section */
+  margin-top: -80px;  
   position: relative; 
   z-index: 5; 
 }
@@ -213,7 +213,7 @@
   margin: 0 auto;
 }
 
-/* Background Glowing Shadow Effect */
+ 
 .card-glow-bg {
   position: absolute;
   top: 10px; left: 10px; right: -10px; bottom: -10px;
@@ -226,10 +226,10 @@
 }
 
 .featured-card-wrapper:hover .card-glow-bg {
-  opacity: 0.8; /* Glow gets brighter on hover */
+  opacity: 0.8;  
 }
 
-/* --- Main Card Design --- */
+ 
 .featured-card {
   display: flex;
   background: #ffffff;
@@ -243,10 +243,10 @@
 }
 
 .featured-card:hover {
-  transform: translateY(-10px); /* Card lifts up */
+  transform: translateY(-10px);  
 }
 
-/* --- Image Side Animations --- */
+ 
 .featured-img { 
   flex: 1.1; 
   position: relative; 
@@ -261,12 +261,12 @@
   transition: transform 0.8s ease;
 }
 
-/* Image Slow Zoom & Tilt on Hover */
+ 
 .featured-card:hover .featured-img img {
   transform: scale(1.08) rotate(1deg); 
 }
 
-/* Pulsing "Featured" Tag */
+ 
 .feat-tag { 
   position: absolute; 
   top: 25px; 
@@ -293,7 +293,7 @@
   100% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0); }
 }
 
-/* --- Content Side --- */
+ 
 .featured-text { 
   flex: 1; 
   padding: 50px 40px; 
@@ -321,7 +321,7 @@
   transition: color 0.3s ease;
 }
 
-/* Heading color change on card hover */
+ 
 .featured-card:hover .featured-text h2 {
   color: #FF5722;
 }
@@ -333,7 +333,7 @@
   font-size: 1.05rem;
 }
 
-/* --- Footer: Author & Button --- */
+ 
 .featured-footer {
   display: flex;
   align-items: center;
@@ -360,7 +360,7 @@
 .author-info span { font-size: 0.9rem; color: #94a3b8; line-height: 1.4; }
 .author-info strong { color: #0A192F; font-size: 1.05rem; }
 
-/* Interactive Button */
+ 
 .btn-read-more {
   color: #ffffff;
   background: #0A192F;
@@ -380,9 +380,9 @@
 }
 
 .arrow-slide { transition: transform 0.3s ease; }
-.btn-read-more:hover .arrow-slide { transform: translateX(8px); } /* Arrow pushes right */
+.btn-read-more:hover .arrow-slide { transform: translateX(8px); }  
 
-/* --- Mobile Response --- */
+ 
 @media (max-width: 900px) {
   .featured-card { flex-direction: column; }
   .featured-img { min-height: 250px; }
@@ -409,7 +409,7 @@
   margin: 0 auto;
 }
 
-/* --- Card Base & Lift Animation --- */
+ 
 .blog-card {
   position: relative;
   background: #ffffff;
@@ -428,7 +428,7 @@
   border-color: rgba(255, 87, 34, 0.4);
 }
 
-/* --- The Shine Sweep Animation --- */
+ 
 .shine-layer {
   position: absolute;
   top: 0;
@@ -439,7 +439,7 @@
   transform: skewX(-25deg);
   z-index: 10;
   pointer-events: none;
-  transition: none; /* Prevent transition when mouse leaves */
+  transition: none;  
 }
 
 .blog-card:hover .shine-layer {
@@ -451,7 +451,7 @@
   100% { left: 200%; }
 }
 
-/* --- Image 3D Tilt --- */
+ 
 .card-img-wrapper {
   position: relative;
   width: 100%;
@@ -470,7 +470,7 @@
   transform: scale(1.12) rotate(2deg);
 }
 
-/* --- Pulsing Badge --- */
+ 
 .card-badge {
   position: absolute;
   top: 15px;
@@ -501,7 +501,7 @@
   50% { transform: scale(1.05); }
 }
 
-/* --- Content Styling --- */
+ 
 .card-content {
   padding: 30px 25px;
   display: flex;
@@ -509,7 +509,7 @@
   flex: 1;
   position: relative;
   z-index: 2;
-  background: #ffffff; /* Ensures text stays above the shine effect if it overflows */
+  background: #ffffff;  
 }
 
 .card-date { color: #94a3b8; font-size: 0.85rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
@@ -517,7 +517,7 @@
 .blog-card:hover .card-content h3 { color: #FF5722; }
 .card-content p { color: #64748b; font-size: 1rem; line-height: 1.6; margin-bottom: 25px; flex: 1; }
 
-/* --- Continuous Arrow Bounce --- */
+ 
 .card-btn {
   color: #0A192F;
   text-decoration: none;
@@ -548,7 +548,7 @@
   100% { transform: translateX(8px); }
 }
 
-/* --- Animated Load More Button --- */
+ 
 .load-more-container { text-align: center; margin-top: 60px; }
 .load-btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 35px; border: 2px solid #0A192F; color: #0A192F; font-weight: 700; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; }
 .load-btn:hover { background: #0A192F; color: #ffffff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(10, 25, 47, 0.2); }
@@ -558,7 +558,7 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Mobile Responsiveness */
+ 
 @media (max-width: 768px) {
   .card-img-wrapper { height: 200px; }
   .card-content h3 { font-size: 1.25rem; }
@@ -570,14 +570,14 @@
 .newsletter-section {
   position: relative;
   padding: 100px 5%;
-  background: linear-gradient(135deg, #FF5722 0%, #d84315 100%); /* Atka Orange Gradient */
+  background: linear-gradient(135deg, #FF5722 0%, #d84315 100%);  
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* --- Floating Background Icons --- */
+ 
 .float-bg {
   position: absolute;
   color: rgba(255, 255, 255, 0.15);
@@ -603,9 +603,9 @@
   50% { transform: translateY(-30px) rotate(10deg); }
 }
 
-/* --- Newsletter Card --- */
+ 
 .newsletter-wrapper {
-  background: #0A192F; /* Deep Dark Navy */
+  background: #0A192F;  
   border-radius: 24px;
   padding: 60px 50px;
   max-width: 900px;
@@ -647,7 +647,7 @@
   margin: 0 auto 40px;
 }
 
-/* --- Form Elements --- */
+ 
 .newsletter-form {
   display: flex;
   gap: 15px;
@@ -673,7 +673,7 @@
   width: 100%;
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid rgba(255, 255, 255, 0.1);
-  padding: 18px 20px 18px 50px; /* Space for icon */
+  padding: 18px 20px 18px 50px;  
   border-radius: 12px;
   color: #ffffff;
   font-size: 1.05rem;
@@ -691,7 +691,7 @@
   box-shadow: 0 0 20px rgba(255, 87, 34, 0.2);
 }
 
-/* --- Animated Subscribe Button --- */
+ 
 .btn-subscribe {
   background: #FF5722;
   color: #ffffff;
@@ -715,7 +715,7 @@
   box-shadow: 0 10px 25px rgba(255, 87, 34, 0.4);
 }
 
-/* Fly Icon Animation on Hover */
+ 
 .send-icon {
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -724,7 +724,7 @@
   transform: translateX(10px) translateY(-10px) scale(1.2);
 }
 
-/* Spam Notice */
+ 
 .spam-notice {
   font-size: 0.85rem;
   color: #64748b;
@@ -735,7 +735,7 @@
 }
 
 .spam-notice i {
-  color: #4CAF50; /* Green Shield */
+  color: #4CAF50;  
 }
 
 /* ===============================
@@ -747,14 +747,14 @@
   width: 100%;
 }
 
-/* 1. Single Pill Wrapper */
+ 
 .newsletter-input-wrapper {
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.08); /* Clean single background */
+  background: rgba(255, 255, 255, 0.08);  
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px; /* Pill shape */
-  padding: 6px 6px 6px 25px; /* Tight on right, space on left */
+  border-radius: 50px;  
+  padding: 6px 6px 6px 25px;  
   transition: all 0.3s ease;
   position: relative;
 }
@@ -765,44 +765,44 @@
   box-shadow: 0 0 15px rgba(255, 87, 34, 0.3);
 }
 
-/* 2. Fix Icon Overlap */
+ 
 .input-icon {
   color: #94a3b8;
   font-size: 1.1rem;
-  margin-right: 12px; /* Adds space between icon and placeholder text */
+  margin-right: 12px;  
 }
 
-/* 3. Input Field Takes Remaining Space */
+ 
 .newsletter-input-wrapper input {
-  flex: 1; /* Pushes the button to the far right */
+  flex: 1;  
   background: transparent;
   border: none;
   padding: 12px 0;
   color: #ffffff;
   font-size: 1.05rem;
   outline: none;
-  min-width: 0; /* Prevents overflow issues */
+  min-width: 0;  
 }
 
 .newsletter-input-wrapper input::placeholder {
   color: #64748b;
 }
 
-/* 4. Fix Button Cut-off (Flex-Shrink: 0 is the magic here) */
+ 
 .btn-subscribe {
-  flex-shrink: 0; /* Prevents the button from being squished */
+  flex-shrink: 0;  
   background: #FF5722;
   color: #ffffff;
   border: none;
   padding: 14px 30px;
-  border-radius: 40px; /* Inner pill shape */
+  border-radius: 40px;  
   font-size: 1.05rem;
   font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 10px;
-  white-space: nowrap; /* Prevents text wrapping */
+  white-space: nowrap;  
   transition: all 0.3s ease;
 }
 
@@ -812,7 +812,7 @@
   box-shadow: 0 8px 20px rgba(255, 87, 34, 0.4);
 }
 
-/* --- Validation Error Styles --- */
+ 
 .newsletter-input-wrapper.error-border {
   border-color: #ff3333 !important;
   box-shadow: 0 0 15px rgba(255, 51, 51, 0.3) !important;
@@ -831,7 +831,7 @@
   100% { transform: translateX(0); }
 }
 
-/* Mobile Responsiveness */
+ 
 @media (max-width: 600px) {
   .newsletter-input-wrapper {
     flex-direction: column;
@@ -844,7 +844,7 @@
   .btn-subscribe { width: 100%; justify-content: center; }
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 768px) {
   .newsletter-wrapper { padding: 40px 25px; }
   .newsletter-content h2 { font-size: 2rem; }
@@ -857,7 +857,7 @@
 =============================== */
 .trending-section {
   padding: 100px 5%;
-  background-color: #F8F9FA; /* Light Premium Gray */
+  background-color: #F8F9FA;  
 }
 
 .trending-header {
@@ -890,16 +890,16 @@
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* --- Layout Grid --- */
+ 
 .trending-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr; /* Main card takes slightly more space */
+  grid-template-columns: 1.2fr 1fr;  
   gap: 50px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* --- LEFT: Main Trending Card (#1) --- */
+ 
 .trend-main-card {
   position: relative;
   background: #ffffff;
@@ -919,14 +919,14 @@
   border-color: rgba(255, 87, 34, 0.4);
 }
 
-/* Giant Background Rank Number */
+ 
 .trend-rank-bg {
   position: absolute;
   top: -20px;
   right: -10px;
   font-size: 12rem;
   font-weight: 900;
-  color: rgba(10, 25, 47, 0.03); /* Faded watermark */
+  color: rgba(10, 25, 47, 0.03);  
   line-height: 1;
   z-index: 0;
   pointer-events: none;
@@ -934,7 +934,7 @@
 }
 
 .trend-main-card:hover .trend-rank-bg {
-  color: rgba(255, 87, 34, 0.05); /* Turns slightly orange on hover */
+  color: rgba(255, 87, 34, 0.05);  
 }
 
 .trend-img-box {
@@ -998,7 +998,7 @@
 .btn-read-inline:hover .slide-arrow { transform: translateX(8px); }
 .slide-arrow { transition: transform 0.3s ease; }
 
-/* --- RIGHT: List Items (#2 to #4) --- */
+ 
 .trend-list-wrapper {
   display: flex;
   flex-direction: column;
@@ -1027,7 +1027,7 @@
   box-shadow: -10px 10px 20px rgba(255, 87, 34, 0.1);
 }
 
-/* List Rank Number */
+ 
 .trend-list-rank {
   font-size: 3rem;
   font-weight: 800;
@@ -1041,7 +1041,7 @@
   -webkit-text-stroke: 1px #FF5722;
 }
 
-/* List Image */
+ 
 .trend-list-img {
   width: 100px;
   height: 100px;
@@ -1061,7 +1061,7 @@
   transform: scale(1.1);
 }
 
-/* List Text */
+ 
 .trend-list-text {
   flex: 1;
 }
@@ -1087,7 +1087,7 @@
 
 .trend-list-item:hover .read-link { color: #FF5722; }
 
-/* Mobile Responsiveness */
+ 
 @media (max-width: 900px) {
   .trending-grid { grid-template-columns: 1fr; }
   .trend-main-card { padding: 20px; }
@@ -1104,7 +1104,7 @@
 .blog-cta-section {
   position: relative;
   padding: 120px 5%;
-  background-color: #030712; /* Ultra Dark Navy / Space Black */
+  background-color: #030712;  
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -1113,7 +1113,7 @@
   border-top: 1px solid rgba(255, 87, 34, 0.1);
 }
 
-/* --- Animated Glowing Orbs --- */
+ 
 .cta-glow {
   position: absolute;
   border-radius: 50%;
@@ -1146,7 +1146,7 @@
   100% { transform: scale(0.9) translate(-30px, 50px); }
 }
 
-/* --- Content Styling --- */
+ 
 .cta-container {
   position: relative;
   z-index: 1;
@@ -1191,7 +1191,7 @@
   margin-right: auto;
 }
 
-/* --- Action Buttons --- */
+ 
 .cta-action-btns {
   display: flex;
   gap: 20px;
@@ -1255,7 +1255,7 @@
   color: #FF5722;
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 768px) {
   .blog-cta-content h2 { font-size: 2.2rem; }
   .cta-action-btns { flex-direction: column; gap: 15px; }
@@ -1272,7 +1272,7 @@
 
 .podcast-wrapper {
   display: flex;
-  background: #0A192F; /* Deep Navy Background */
+  background: #0A192F;  
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 25px 50px rgba(10, 25, 47, 0.2);
@@ -1282,7 +1282,7 @@
   position: relative;
 }
 
-/* --- Left Visual Side --- */
+ 
 .podcast-visual {
   flex: 1;
   padding: 60px;
@@ -1312,7 +1312,7 @@
   box-shadow: 10px 10px 30px rgba(0,0,0,0.5);
 }
 
-/* Animated Spinning Disc behind cover */
+ 
 .vinyl-disc {
   position: absolute;
   top: 10px; right: -50px;
@@ -1329,7 +1329,7 @@
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   width: 70px; height: 70px;
-  background: #FF5722; /* Center label */
+  background: #FF5722;  
   border-radius: 50%;
   border: 5px solid #111;
 }
@@ -1342,7 +1342,7 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Animated Equalizer */
+ 
 .audio-equalizer {
   display: flex;
   gap: 6px;
@@ -1368,7 +1368,7 @@
   100% { height: 100%; }
 }
 
-/* --- Right Content Side --- */
+ 
 .podcast-content {
   flex: 1.2;
   padding: 60px;
@@ -1400,7 +1400,7 @@
   margin-bottom: 30px;
 }
 
-/* Track List */
+ 
 .track-list {
   display: flex;
   flex-direction: column;
@@ -1417,7 +1417,7 @@
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
-  /* cursor: pointer; */
+   
 }
 
 .track-item:hover {
@@ -1464,12 +1464,12 @@
 
 .track-item:hover .track-wave { color: #FF5722; }
 
-/* Spotify Button */
+ 
 .btn-spotify {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #1DB954; /* Spotify Green */
+  background: #1DB954;  
   color: white;
   padding: 15px 30px;
   border-radius: 50px;
@@ -1484,7 +1484,7 @@
   transform: translateY(-3px);
 }
 
-/* Mobile */
+ 
 @media (max-width: 900px) {
   .podcast-wrapper { flex-direction: column; }
   .podcast-visual { padding: 40px 20px; border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }

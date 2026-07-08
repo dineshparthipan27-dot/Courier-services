@@ -16,7 +16,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Split Container */
+ 
 .auth-split-container {
     display: flex;
     min-height: 100vh;
@@ -133,7 +133,7 @@ body {
     animation: fadeUp 1s ease 0.2s both;
 }
 
-/* Floating Glass Stats */
+ 
 .glass-stats-wrapper {
     display: flex;
     gap: 20px;
@@ -228,7 +228,7 @@ body {
     font-size: 1rem;
 }
 
-/* Sliding Pill Tabs */
+ 
 .pill-tabs {
     position: relative;
     display: flex;
@@ -269,7 +269,7 @@ body {
     color: #ffffff;
 }
 
-/* Forms Transition */
+ 
 .auth-form {
     display: none;
     animation: fadeIn 0.5s ease forwards;
@@ -291,7 +291,7 @@ body {
     }
 }
 
-/* Floating Label Inputs */
+ 
 .input-group {
     position: relative;
     margin-bottom: 25px;
@@ -334,7 +334,7 @@ body {
     z-index: 1;
 }
 
-/* The Floating Magic */
+ 
 .input-group input:focus~label,
 .input-group input:not(:placeholder-shown)~label,
 .input-group select:focus~label,
@@ -371,7 +371,7 @@ body {
     color: #FF5722;
 }
 
-/* Errors & Actions */
+ 
 .error-msg {
     position: absolute;
     bottom: -20px;
@@ -409,7 +409,7 @@ body {
     color: #0A192F;
 }
 
-/* Primary Button */
+ 
 .btn-primary {
     width: 100%;
     height: 60px;
@@ -435,7 +435,7 @@ body {
     box-shadow: 0 15px 30px rgba(255, 87, 34, 0.3);
 }
 
-/* Shake Animation */
+ 
 .error-border {
     border-color: #ef4444 !important;
     background: rgba(239, 68, 68, 0.05) !important;
@@ -465,7 +465,7 @@ body {
     }
 }
 
-/* Mobile View */
+ 
 @media (max-width: 992px) {
     .auth-split-container {
         flex-direction: column;
@@ -491,7 +491,7 @@ body {
         display: none;
     }
 
-    /* Hide on mobile to save space */
+     
 }
 
 input[type="password"]::-ms-reveal,

@@ -6,12 +6,12 @@
   min-height: 90vh; 
   display: flex;
   align-items: center;
-  background-color: #050c18; /* Deep Space Navy */
+  background-color: #050c18;  
   overflow: hidden;
   padding: 120px 5% 80px;
 }
 
-/* Background Grids & Orbs (Same as before) */
+ 
 .moving-grid {
   position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
   background-image: 
@@ -31,7 +31,7 @@
 .orb-right { width: 400px; height: 400px; background: #007BFF; bottom: -100px; right: -100px; animation-delay: -3s; }
 @keyframes orbBreathe { 0% { transform: scale(0.8); opacity: 0.3; } 100% { transform: scale(1.2); opacity: 0.6; } }
 
-/* --- Split Layout Container --- */
+ 
 .about-hero-container {
   position: relative;
   z-index: 2; 
@@ -44,7 +44,7 @@
   width: 100%;
 }
 
-/* --- LEFT SIDE: Content --- */
+ 
 .hero-content {
   flex: 1;
   text-align: left;
@@ -65,7 +65,7 @@
 .btn-outline-light:hover { background: rgba(255, 255, 255, 0.1); border-color: #ffffff; transform: translateY(-3px); }
 
 
-/* --- RIGHT SIDE: Visuals & Animations --- */
+ 
 .hero-visual {
   flex: 1;
   position: relative;
@@ -79,7 +79,7 @@
   max-width: 500px;
 }
 
-/* Floating Animation for Main Image */
+ 
 .floating-main-img {
   width: 100%;
   height: auto;
@@ -95,7 +95,7 @@
   100% { transform: translateY(0px); }
 }
 
-/* Glassmorphism Floating Cards */
+ 
 .float-card {
   position: absolute;
   background: rgba(255, 255, 255, 0.1);
@@ -154,7 +154,7 @@
   font-size: 0.85rem;
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 900px) {
   .about-hero-container {
     flex-direction: column;
@@ -176,7 +176,7 @@
 =============================== */
 .timeline-section {
   padding: 100px 5%;
-  background-color: #F8F9FA; /* Light Premium Gray */
+  background-color: #F8F9FA;  
   position: relative;
   overflow: hidden;
 }
@@ -192,14 +192,14 @@
   margin-bottom: 15px;
 }
 
-/* --- Timeline Container --- */
+ 
 .timeline-container {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* The Center Vertical Line */
+ 
 .timeline-line {
   position: absolute;
   top: 0;
@@ -211,7 +211,7 @@
   border-radius: 2px;
 }
 
-/* --- Timeline Items --- */
+ 
 .timeline-item {
   position: relative;
   width: 50%;
@@ -229,7 +229,7 @@
   text-align: left;
 }
 
-/* The Dots on the Line */
+ 
 .timeline-dot {
   position: absolute;
   top: 30px;
@@ -244,14 +244,14 @@
 }
 
 .left .timeline-dot {
-  right: -10px; /* Align to center line from left */
+  right: -10px;  
 }
 
 .right .timeline-dot {
-  left: -10px; /* Align to center line from right */
+  left: -10px;  
 }
 
-/* --- Timeline Content Cards --- */
+ 
 .timeline-content {
   background: #ffffff;
   padding: 30px;
@@ -273,7 +273,7 @@
   background-color: #FF5722;
 }
 
-/* The Year Badge */
+ 
 .timeline-year {
   display: inline-block;
   background: rgba(255, 87, 34, 0.1);
@@ -300,35 +300,35 @@
   margin: 0;
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 768px) {
-  /* Move line to the left */
+   
   .timeline-line {
     left: 20px;
     transform: none;
   }
   
-  /* Make items full width */
+   
   .timeline-item {
     width: 100%;
-    padding-left: 60px; /* Space for the line and dot */
+    padding-left: 60px;  
     padding-right: 0;
-    text-align: left !important; /* Left align everything */
+    text-align: left !important;  
   }
   
   .timeline-item.right {
     left: 0;
   }
   
-  /* Adjust dots to sit on the left line */
+   
   .timeline-dot {
     left: 10px !important; 
     right: auto !important;
   }
   
-  /* Adjust AOS animations for mobile to all come from bottom or right to prevent overflow */
+   
   .timeline-item.left .timeline-content {
-    /* Optional: override AOS attributes via JS, but visually fading up is safer for mobile */
+     
   }
 }
 
@@ -337,12 +337,12 @@
 =============================== */
 .mv-section {
   padding: 100px 5%;
-  background-color: #030712; /* Deep Dark Space */
+  background-color: #030712;  
   position: relative;
   overflow: hidden;
 }
 
-/* Abstract Tech Background Pattern */
+ 
 .mv-bg-pattern {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -364,7 +364,7 @@
   margin: 0 auto;
 }
 
-/* --- Card Design (Glassmorphism) --- */
+ 
 .mv-card {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
@@ -378,21 +378,21 @@
   overflow: hidden;
 }
 
-/* Unique Hover Glow for Mission (Orange) */
+ 
 .mission-card:hover {
   transform: translateY(-10px);
   border-color: rgba(255, 87, 34, 0.4);
   box-shadow: 0 20px 40px rgba(255, 87, 34, 0.1);
 }
 
-/* Unique Hover Glow for Vision (Blue) */
+ 
 .vision-card:hover {
   transform: translateY(-10px);
   border-color: rgba(0, 123, 255, 0.4);
   box-shadow: 0 20px 40px rgba(0, 123, 255, 0.1);
 }
 
-/* --- Icon & Ripple Animation --- */
+ 
 .mv-icon-wrapper {
   position: relative;
   width: 70px;
@@ -422,7 +422,7 @@
   box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
 }
 
-/* Ripple Ring Animation on Hover */
+ 
 .ripple-ring {
   position: absolute;
   top: 50%; left: 50%;
@@ -451,7 +451,7 @@
   100% { width: 160%; height: 160%; opacity: 0; }
 }
 
-/* --- Typography --- */
+ 
 .mv-card h3 {
   font-size: 2rem;
   color: #ffffff;
@@ -466,7 +466,7 @@
   margin-bottom: 30px;
 }
 
-/* --- Feature List --- */
+ 
 .mv-list {
   list-style: none;
   padding: 0;
@@ -485,7 +485,7 @@
 .mission-card .mv-list i { color: #FF5722; }
 .vision-card .mv-list i { color: #007BFF; }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 768px) {
   .mv-card {
     padding: 40px 25px;
@@ -497,7 +497,7 @@
 =============================== */
 .values-section {
   padding: 100px 5%;
-  background-color: #F8F9FA; /* Bright Off-White */
+  background-color: #F8F9FA;  
   position: relative;
 }
 
@@ -514,7 +514,7 @@
   margin: 0 auto;
 }
 
-/* --- Value Card Design --- */
+ 
 .value-card {
   background: #ffffff;
   padding: 40px 30px;
@@ -528,7 +528,7 @@
   z-index: 1;
 }
 
-/* Animated Bottom Border (Draws from center) */
+ 
 .value-card::after {
   content: '';
   position: absolute;
@@ -542,7 +542,7 @@
   border-radius: 2px 2px 0 0;
 }
 
-/* Hover Effects */
+ 
 .value-card:hover {
   transform: translateY(-15px);
   box-shadow: 0 20px 40px rgba(10, 25, 47, 0.08);
@@ -550,10 +550,10 @@
 }
 
 .value-card:hover::after {
-  width: 100%; /* Line expands on hover */
+  width: 100%;  
 }
 
-/* --- Icon Box --- */
+ 
 .value-icon-box {
   width: 80px;
   height: 80px;
@@ -571,11 +571,11 @@
 .value-card:hover .value-icon-box {
   background: #FF5722;
   color: #ffffff;
-  transform: rotateY(180deg) scale(1.1); /* 3D Spin and pop */
+  transform: rotateY(180deg) scale(1.1);  
   box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
 }
 
-/* --- Typography --- */
+ 
 .value-card h3 {
   color: #0A192F;
   font-size: 1.3rem;
@@ -590,7 +590,7 @@
   margin: 0;
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 768px) {
   .value-card {
     padding: 30px 20px;
@@ -602,7 +602,7 @@
 =============================== */
 .infra-section {
   padding: 120px 5%;
-  background-color: #0A192F; /* Atka Navy Blue */
+  background-color: #0A192F;  
   overflow: hidden;
 }
 
@@ -615,13 +615,13 @@
   margin: 0 auto;
 }
 
-/* Left Aligned Dark Header Override */
+ 
 .align-left {
   text-align: left !important;
   margin-bottom: 40px !important;
 }
 
-/* --- LEFT SIDE: Visuals --- */
+ 
 .infra-visual {
   flex: 1;
   position: relative;
@@ -644,10 +644,10 @@
 }
 
 .infra-img-wrapper:hover .infra-img {
-  transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.05);  
 }
 
-/* 🟢 Animated Laser Scanner Line */
+ 
 .scanner-line {
   position: absolute;
   top: 0;
@@ -668,7 +668,7 @@
   100% { top: 110%; opacity: 0; }
 }
 
-/* Floating Badge */
+ 
 .infra-badge {
   position: absolute;
   bottom: 20px;
@@ -693,7 +693,7 @@
   font-size: 1.2rem;
 }
 
-/* --- RIGHT SIDE: Content & Features --- */
+ 
 .infra-content {
   flex: 1;
 }
@@ -716,7 +716,7 @@
 }
 
 .infra-item:hover {
-  transform: translateX(10px); /* Slides right on hover */
+  transform: translateX(10px);  
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 87, 34, 0.3);
 }
@@ -747,30 +747,30 @@
   margin: 0;
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 900px) {
   .infra-container {
     flex-direction: column;
   }
   
   .infra-badge {
-    right: 20px; /* Adjust badge for small screens */
+    right: 20px;  
   }
   
   .infra-item:hover {
-    transform: none; /* Disable slide on touch screens */
+    transform: none;  
   }
 }
 
-/* Fix for text visibility on dark backgrounds */
+ 
 .section-header-dark h2 {
-  color: #FF5722 !important; /* Pure white for the heading */
+  color: #FF5722 !important;  
   font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
 .section-header-dark p {
-  color: #cbd5e1 !important; /* Light slate gray for the paragraph */
+  color: #cbd5e1 !important;  
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -797,7 +797,7 @@
   margin: 0 auto;
 }
 
-/* --- Leader Card --- */
+ 
 .leader-card {
   background: #F8F9FA;
   border-radius: 20px;
@@ -812,7 +812,7 @@
   box-shadow: 0 20px 40px rgba(10, 25, 47, 0.1);
 }
 
-/* --- Image & Overlay Animations --- */
+ 
 .leader-img-wrapper {
   position: relative;
   width: 100%;
@@ -832,7 +832,7 @@
   transform: scale(1.1);
 }
 
-/* Gradient Curtain Reveal */
+ 
 .leader-social-overlay {
   position: absolute;
   bottom: 0;
@@ -853,7 +853,7 @@
   opacity: 1;
 }
 
-/* Social Icons Staggered Slide-Up */
+ 
 .leader-social {
   background: #ffffff;
   color: #FF5722;
@@ -868,7 +868,7 @@
   transform: translateY(30px);
   opacity: 0;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  /* CSS Variable var(--delay) is set in HTML for staggered effect */
+   
   transition-delay: var(--delay);
 }
 
@@ -880,10 +880,10 @@
 .leader-social:hover {
   background: #FF5722;
   color: #ffffff;
-  transform: translateY(-5px) scale(1.1) !important; /* Extra pop on specific icon hover */
+  transform: translateY(-5px) scale(1.1) !important;  
 }
 
-/* --- Content Information --- */
+ 
 .leader-info {
   padding: 30px;
   text-align: left;
@@ -908,7 +908,7 @@
   margin-bottom: 15px;
 }
 
-/* Pulse Dot for Active Status */
+ 
 .role-dot {
   width: 8px;
   height: 8px;
@@ -934,7 +934,7 @@
   margin: 0;
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 768px) {
   .leader-img-wrapper {
     height: 300px;
@@ -950,12 +950,12 @@
 .about-cta-section {
   position: relative;
   padding: 100px 5%;
-  background: linear-gradient(135deg, #FF5722 0%, #d84315 100%); /* Energetic Atka Orange Gradient */
+  background: linear-gradient(135deg, #FF5722 0%, #d84315 100%);  
   overflow: hidden;
   text-align: center;
 }
 
-/* --- Background Decorative Circles --- */
+ 
 .cta-circle {
   position: absolute;
   border-radius: 50%;
@@ -985,7 +985,7 @@
   100% { transform: translateY(30px) scale(1.05); }
 }
 
-/* --- Content Wrapper --- */
+ 
 .cta-content-wrapper {
   position: relative;
   z-index: 1;
@@ -1008,7 +1008,7 @@
   margin-bottom: 40px;
 }
 
-/* --- Buttons --- */
+ 
 .cta-actions {
   display: flex;
   gap: 20px;
@@ -1016,14 +1016,14 @@
   align-items: center;
 }
 
-/* Primary White Button with Pulse */
+ 
 .btn-white-pulse {
   background: #ffffff;
   color: #FF5722;
   padding: 18px 40px;
   font-size: 1.1rem;
   font-weight: 800;
-  border-radius: 50px; /* Pill shape */
+  border-radius: 50px;  
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -1036,9 +1036,9 @@
 .btn-white-pulse:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  background: #0A192F; /* Turns to Navy on hover */
+  background: #0A192F;  
   color: #ffffff;
-  animation: none; /* Stops pulsing on hover */
+  animation: none;  
 }
 
 @keyframes heartbeatPulse {
@@ -1047,7 +1047,7 @@
   100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 }
 
-/* Secondary Navy Outline Button */
+ 
 .btn-outline-navy {
   background: transparent;
   color: #ffffff;
@@ -1069,7 +1069,7 @@
   transform: translateY(-5px);
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 768px) {
   .cta-content-wrapper h2 {
     font-size: 2.5rem;

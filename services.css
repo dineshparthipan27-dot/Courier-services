@@ -6,18 +6,18 @@
   min-height: 85vh; 
   display: flex;
   align-items: center;
-  background-color: #030712; /* Ultra Dark Navy */
+  background-color: #030712;  
   overflow: hidden;
   padding: 120px 5% 80px;
 }
 
-/* Background Glowing Orbs */
+ 
 .hero-glow-orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.4; z-index: 1; }
 .orb-navy { width: 500px; height: 500px; background: #007BFF; top: -100px; left: -150px; }
 .orb-orange { width: 400px; height: 400px; background: #FF5722; bottom: -50px; right: -100px; animation: pulseGlow 6s infinite alternate; }
 @keyframes pulseGlow { 0% { transform: scale(1); opacity: 0.3; } 100% { transform: scale(1.2); opacity: 0.5; } }
 
-/* --- Split Layout Container --- */
+ 
 .srv-hero-container {
   position: relative;
   z-index: 2;
@@ -30,7 +30,7 @@
   width: 100%;
 }
 
-/* --- LEFT SIDE: Content --- */
+ 
 .srv-hero-content {
   flex: 1.1;
   text-align: left;
@@ -46,13 +46,13 @@
 
 .srv-hero-actions { display: flex; gap: 20px; }
 
-/* Buttons (Reusing the global styles we made earlier) */
+ 
 .btn-primary-glow { background: #FF5722; color: #ffffff; padding: 16px 35px; font-size: 1.1rem; font-weight: 700; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(255, 87, 34, 0.4); }
 .btn-primary-glow:hover { transform: translateY(-3px); background: #e64a19; box-shadow: 0 15px 35px rgba(255, 87, 34, 0.6); }
 .btn-outline-light { background: transparent; color: #ffffff; border: 2px solid rgba(255, 255, 255, 0.3); padding: 16px 35px; font-size: 1.1rem; font-weight: 700; border-radius: 8px; text-decoration: none; transition: all 0.3s ease; }
 .btn-outline-light:hover { background: rgba(255, 255, 255, 0.1); border-color: #ffffff; transform: translateY(-3px); }
 
-/* --- RIGHT SIDE: Animated Image & Data Cards --- */
+ 
 .srv-hero-visual {
   flex: 0.9;
   position: relative;
@@ -66,7 +66,7 @@
   max-width: 480px;
 }
 
-/* Floating Image Animation */
+ 
 .srv-main-img {
   width: 100%;
   height: auto;
@@ -81,7 +81,7 @@
   50% { transform: translateY(-20px); }
 }
 
-/* Glassmorphism Floating UI Cards */
+ 
 .srv-float-card {
   position: absolute;
   background: rgba(10, 25, 47, 0.7);
@@ -105,7 +105,7 @@
   50% { transform: translateY(15px); }
 }
 
-/* Icons Inside Floating Cards */
+ 
 .card-icon-box { width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #fff; }
 .icon-blue { background: linear-gradient(135deg, #007BFF, #0056b3); box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); }
 .icon-orange { background: linear-gradient(135deg, #FF5722, #e64a19); box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4); }
@@ -116,12 +116,12 @@
 .pulse-icon { animation: pulseIconSize 2s infinite; }
 @keyframes pulseIconSize { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
 
-/* Text Inside Floating Cards */
+ 
 .card-text strong { display: block; color: #ffffff; font-size: 1.05rem; margin-bottom: 3px; }
 .card-text span { display: flex; align-items: center; gap: 5px; color: #a0aec0; font-size: 0.85rem; }
 .live-dot { width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; animation: blink 1s infinite; }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 900px) {
   .srv-hero-container { flex-direction: column; text-align: center; gap: 60px; }
   .srv-hero-content { text-align: center; }
@@ -137,12 +137,12 @@
 =============================== */
 .core-srv-section {
   padding: 120px 5%;
-  background-color: #0A192F; /* Deep Atka Navy */
+  background-color: #0A192F;  
   position: relative;
   overflow: hidden;
 }
 
-/* Abstract Dot Pattern Background */
+ 
 .core-srv-bg {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -170,7 +170,7 @@
   margin-bottom: 15px;
 }
 
-/* --- Services Grid --- */
+ 
 .core-srv-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -179,7 +179,7 @@
   margin: 0 auto;
 }
 
-/* --- Glassmorphism Card Design --- */
+ 
 .core-card {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
@@ -193,7 +193,7 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* The Invisible Glow that appears on hover */
+ 
 .card-glow-bg {
   position: absolute;
   top: -50%; left: -50%; width: 200%; height: 200%;
@@ -211,10 +211,10 @@
 }
 
 .core-card:hover .card-glow-bg {
-  opacity: 1; /* Glow turns on */
+  opacity: 1;  
 }
 
-/* --- Icon Wrapper --- */
+ 
 .core-icon-wrapper {
   width: 70px;
   height: 70px;
@@ -244,10 +244,10 @@
 
 .core-card:hover .core-icon {
   color: #ffffff;
-  transform: rotateY(360deg); /* 3D Spin effect */
+  transform: rotateY(360deg);  
 }
 
-/* --- Content Styling --- */
+ 
 .core-card h3 {
   color: #ffffff;
   font-size: 1.6rem;
@@ -266,7 +266,7 @@
   z-index: 1;
 }
 
-/* Mini Feature List */
+ 
 .core-features {
   list-style: none;
   padding: 0;
@@ -288,7 +288,7 @@
   color: #FF5722;
 }
 
-/* CTA Link */
+ 
 .core-btn {
   display: inline-flex;
   align-items: center;
@@ -311,17 +311,17 @@
 }
 
 .core-card:hover .core-btn span {
-  transform: translateX(5px); /* Arrow slides right */
+  transform: translateX(5px);  
 }
 
-/* Fix for paragraph text visibility on dark background */
+ 
 .section-header-dark p {
-  color: #cbd5e1 !important; /* Premium Light Slate Gray */
+  color: #cbd5e1 !important;  
   font-size: 1.15rem;
   line-height: 1.6;
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 768px) {
   .core-card {
     padding: 30px 25px;
@@ -333,7 +333,7 @@
 =============================== */
 .industry-section {
   padding: 120px 5%;
-  background-color: #ffffff; /* Clean White */
+  background-color: #ffffff;  
   position: relative;
   overflow: hidden;
 }
@@ -344,7 +344,7 @@
 }
 
 .industry-section .section-header h2 {
-  color: #0A192F; /* Atka Navy */
+  color: #0A192F;  
   font-size: 2.5rem;
   margin-bottom: 15px;
 }
@@ -354,11 +354,11 @@
   font-size: 1.15rem;
 }
 
-/* --- Row Layout --- */
+ 
 .industry-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 100px; /* Space between each industry block */
+  gap: 100px;  
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -371,10 +371,10 @@
 }
 
 .reverse-row {
-  flex-direction: row-reverse; /* Flips the layout for the 2nd row */
+  flex-direction: row-reverse;  
 }
 
-/* --- Content Side --- */
+ 
 .industry-content {
   flex: 1;
 }
@@ -453,7 +453,7 @@
   box-shadow: 0 10px 20px rgba(255, 87, 34, 0.2);
 }
 
-/* --- Visual Side (Images & Animations) --- */
+ 
 .industry-visual {
   flex: 1;
   position: relative;
@@ -468,19 +468,19 @@
 
 .ind-img-wrapper img {
   width: 100%;
-  height: 400px; /* Fixed height for consistency */
+  height: 400px;  
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .industry-row:hover .ind-img-wrapper img {
-  transform: scale(1.08); /* Zoom effect on hover */
+  transform: scale(1.08);  
 }
 
-/* Floating Badges on Images */
+ 
 .float-badge {
   position: absolute;
-  background: #0A192F; /* Navy background */
+  background: #0A192F;  
   color: #ffffff;
   padding: 12px 25px;
   border-radius: 30px;
@@ -516,7 +516,7 @@
   50% { transform: translateY(-15px); }
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 900px) {
   .industry-row, .reverse-row {
     flex-direction: column;
@@ -525,7 +525,7 @@
   }
   
   .ind-features li {
-    justify-content: center; /* Center list items on mobile */
+    justify-content: center;  
   }
   
   .badge-right, .badge-left {
@@ -544,7 +544,7 @@
 =============================== */
 .process-section {
   padding: 120px 5%;
-  background-color: #F8F9FA; /* Premium Light Gray */
+  background-color: #F8F9FA;  
   position: relative;
   overflow: hidden;
 }
@@ -560,7 +560,7 @@
   margin-bottom: 15px;
 }
 
-/* --- Process Track Wrapper --- */
+ 
 .process-track {
   display: flex;
   justify-content: space-between;
@@ -569,10 +569,10 @@
   margin: 0 auto;
 }
 
-/* The Connecting Background Line */
+ 
 .track-line {
   position: absolute;
-  top: 35px; /* Aligned with the center of the step numbers */
+  top: 35px;  
   left: 5%;
   width: 90%;
   height: 4px;
@@ -581,7 +581,7 @@
   z-index: 0;
 }
 
-/* 🟢 The Animated Moving Dot */
+ 
 .moving-dot {
   position: absolute;
   top: -4px;
@@ -601,7 +601,7 @@
   100% { left: 100%; opacity: 0; }
 }
 
-/* --- Individual Process Step --- */
+ 
 .process-step {
   flex: 1;
   text-align: center;
@@ -615,11 +615,11 @@
   transform: translateY(-10px);
 }
 
-/* Step Number Badge */
+ 
 .step-number {
   width: 70px;
   height: 70px;
-  background: #0A192F; /* Navy Blue */
+  background: #0A192F;  
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 800;
@@ -639,7 +639,7 @@
   box-shadow: 0 15px 30px rgba(255, 87, 34, 0.3);
 }
 
-/* Optional Pulse Animation for Numbers */
+ 
 .pulse-orange {
   animation: gentlePulse 2s infinite;
 }
@@ -649,7 +649,7 @@
   50% { box-shadow: 0 0 0 10px rgba(255, 87, 34, 0); }
 }
 
-/* Icon & Text styling */
+ 
 .step-icon {
   font-size: 2.2rem;
   color: #FF5722;
@@ -674,7 +674,7 @@
   line-height: 1.6;
 }
 
-/* --- Mobile Responsiveness (Vertical Timeline Mode) --- */
+ 
 @media (max-width: 900px) {
   .process-track {
     flex-direction: column;
@@ -715,7 +715,7 @@
 =============================== */
 .tech-section {
   padding: 120px 5%;
-  background-color: #030712; /* Ultra Dark Tech Navy */
+  background-color: #030712;  
   position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(255, 87, 34, 0.1);
@@ -730,7 +730,7 @@
   margin: 0 auto;
 }
 
-/* --- LEFT SIDE: Visuals --- */
+ 
 .tech-visual {
   flex: 1;
   position: relative;
@@ -758,7 +758,7 @@
   border-color: rgba(255, 87, 34, 0.3);
 }
 
-/* Floating UI Elements */
+ 
 .tech-float {
   position: absolute;
   background: rgba(10, 25, 47, 0.85);
@@ -771,7 +771,7 @@
   z-index: 10;
 }
 
-/* Floating Pin Element */
+ 
 .float-pin {
   top: 20px;
   right: -30px;
@@ -793,7 +793,7 @@
 .pin-text span { display: block; color: #a0aec0; font-size: 0.8rem; margin-bottom: 2px; }
 .pin-text strong { display: block; color: #ffffff; font-size: 0.95rem; }
 
-/* Floating Code Snippet */
+ 
 .float-code {
   bottom: 30px;
   left: -40px;
@@ -803,15 +803,15 @@
   animation: techFloat 7s ease-in-out infinite reverse;
 }
 
-.code-key { color: #64ffda; /* Tech Green */ }
-.code-val { color: #FF5722; /* Atka Orange */ }
+.code-key { color: #64ffda;   }
+.code-val { color: #FF5722;   }
 
 @keyframes techFloat {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
 }
 
-/* --- RIGHT SIDE: Content --- */
+ 
 .tech-content {
   flex: 1.1;
 }
@@ -874,7 +874,7 @@
   margin: 0;
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 900px) {
   .tech-container {
     flex-direction: column;
@@ -889,7 +889,7 @@
 =============================== */
 .pricing-section {
   padding: 120px 5%;
-  background-color: #030712; /* Deep Navy */
+  background-color: #030712;  
   position: relative;
 }
 
@@ -901,7 +901,7 @@
   margin: 0 auto;
 }
 
-/* --- Pricing Card --- */
+ 
 .price-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -942,7 +942,7 @@
 .features li { color: #cbd5e1; margin-bottom: 15px; display: flex; gap: 10px; align-items: center; }
 .features li i { color: #FF5722; }
 
-/* --- Liquid Fill Button --- */
+ 
 .btn-liquid {
   display: inline-block;
   padding: 15px 30px;
@@ -972,10 +972,10 @@
   left: 0;
 }
 
-/* Better spacing for the Pricing Header */
+ 
 .pricing-section .section-header {
   text-align: center;
-  margin-bottom: 60px; /* Increased space for visual clarity */
+  margin-bottom: 60px;  
 }
 
 .pricing-section .section-header h2 {
@@ -989,7 +989,7 @@
   font-size: 1.15rem;
 }
 
-/* Enhanced Popular Badge */
+ 
 .badge-pop {
   position: absolute;
   top: -15px; 
@@ -997,13 +997,13 @@
   transform: translateX(-50%);
   background: #FF5722;
   color: white;
-  padding: 6px 18px; /* Slightly more padding */
+  padding: 6px 18px;  
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3); /* Soft shadow */
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);  
 }
 
 /* ===============================
@@ -1017,7 +1017,7 @@
   overflow: hidden;
 }
 
-/* Background grid for depth */
+ 
 .srv-cta-bg-grid {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -1048,7 +1048,7 @@
   opacity: 0.9;
 }
 
-/* --- Pulse Animation for Button --- */
+ 
 .btn-pulse-orange {
   display: inline-flex;
   align-items: center;
@@ -1096,7 +1096,7 @@
   color: #FF5722;
 }
 
-/* Mobile */
+ 
 @media (max-width: 768px) {
   .btn-outline-white { margin-left: 0; margin-top: 15px; }
   .cta-btns { display: flex; flex-direction: column; }

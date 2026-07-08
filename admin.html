@@ -441,7 +441,7 @@
             border: 1px solid #bbf7d0;
         }
 
-        /* Buttons */
+         
         .main-btn,
         .action-btn {
             cursor: pointer;
@@ -1103,7 +1103,7 @@
     </div>
 
     <script>
-        // Set User Name from LocalStorage (Fallback to Admin)
+ 
         const emailValue = localStorage.getItem("UserMail") || "admin@speedx.com";
         const extractedName = emailValue.split("@")[0];
         const formattedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
@@ -1112,7 +1112,7 @@
         const welcomeEl = document.querySelector(".welcome-name");
         if (welcomeEl) { welcomeEl.textContent = `| Welcome, ${formattedName} 👋`; }
 
-        // Sidebar Mobile Toggle
+ 
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('sidebarOverlay');
         const openSidebarBtn = document.getElementById('openSidebar');
@@ -1125,7 +1125,7 @@
         closeSidebarBtn.addEventListener('click', closeSidebar);
         overlay.addEventListener('click', closeSidebar);
 
-        // View Switching Logic
+ 
         const menuLinks = document.querySelectorAll('.sidebar-menu .menu-link');
         const views = document.querySelectorAll('.view-section');
         const pageTitle = document.getElementById('page-title');
@@ -1141,7 +1141,7 @@
                 const targetId = this.getAttribute('data-target');
                 document.getElementById(targetId).classList.add('active');
 
-                // Update Header Title
+ 
                 let titleText = this.innerText.trim();
                 pageTitle.innerHTML = `${titleText} <span class="welcome-name">| Admin</span>`;
 
@@ -1150,7 +1150,7 @@
             });
         });
 
-        // Chart.js Setup for Volume
+ 
         const ctx = document.getElementById('volumeChart').getContext('2d');
         const volumeChart = new Chart(ctx, {
             type: 'line',
@@ -1176,7 +1176,7 @@
             }
         });
 
-        // Scroll Animations (Intersection Observer)
+ 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) { entry.target.classList.add('show'); }
@@ -1192,9 +1192,9 @@
         }
         triggerAnimations();
 
-        // ===============================
-        // Form Validation for Dispatch
-        // ===============================
+ 
+ 
+ 
         document.getElementById('dispatchForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -1209,7 +1209,7 @@
 
             let isValid = true;
 
-            // Reset States
+ 
             trackingInput.classList.remove('input-error');
             serviceSelect.classList.remove('input-error');
             prioritySelect.classList.remove('input-error');
@@ -1218,28 +1218,28 @@
             priorityError.style.display = 'none';
             formSuccess.style.display = 'none';
 
-            // Validate Tracking ID
+ 
             if (trackingInput.value.trim().length < 5) {
                 trackingInput.classList.add('input-error');
                 trackingError.style.display = 'block';
                 isValid = false;
             }
 
-            // Validate Service Select
+ 
             if (serviceSelect.value === '') {
                 serviceSelect.classList.add('input-error');
                 serviceError.style.display = 'block';
                 isValid = false;
             }
 
-            // Validate Priority Select
+ 
             if (prioritySelect.value === '') {
                 prioritySelect.classList.add('input-error');
                 priorityError.style.display = 'block';
                 isValid = false;
             }
 
-            // Success Action
+ 
             if (isValid) {
                 const btn = this.querySelector('button');
                 btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
@@ -1249,7 +1249,7 @@
                     btn.innerHTML = 'Generate Label & Dispatch <i class="fa-solid fa-barcode"></i>';
                     this.reset();
 
-                    // Hide success message after 3 seconds
+ 
                     setTimeout(() => formSuccess.style.display = 'none', 3000);
                     window.location.href = '404.html'
                 }, 500);

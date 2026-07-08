@@ -4,9 +4,9 @@
 .contact-hero {
     position: relative;
     padding: 180px 5% 140px;
-    /* Slightly taller for floating elements */
+     
     background-color: #030712;
-    /* Deep Dark Space */
+     
     text-align: center;
     overflow: hidden;
     border-bottom: 1px solid rgba(255, 87, 34, 0.1);
@@ -19,7 +19,7 @@
     margin: 0 auto;
 }
 
-/* --- Animated Tech Grid Background --- */
+ 
 .hero-tech-grid {
     position: absolute;
     top: -40px;
@@ -44,7 +44,7 @@
     }
 }
 
-/* --- Floating 3D-Like Glass Icons --- */
+ 
 .floating-contact-icon {
     position: absolute;
     z-index: 2;
@@ -100,7 +100,7 @@
     }
 }
 
-/* --- Typography & Badges --- */
+ 
 .contact-badge {
     display: inline-flex;
     align-items: center;
@@ -141,7 +141,7 @@
     line-height: 1.15;
 }
 
-/* Glowing Highlight Text */
+ 
 .text-glow-orange {
     color: #FF5722;
     position: relative;
@@ -150,7 +150,7 @@
 
 .text-glow-orange::after {
     content: 'Cargo';
-    /* Must match the text inside the span */
+     
     position: absolute;
     top: 0;
     left: 0;
@@ -177,7 +177,7 @@
     line-height: 1.7;
 }
 
-/* --- Ambient Orbs --- */
+ 
 .hero-glow-orb {
     position: absolute;
     border-radius: 50%;
@@ -214,7 +214,7 @@
     }
 }
 
-/* Mobile Responsiveness */
+ 
 @media (max-width: 900px) {
     .contact-hero {
         padding: 140px 5% 100px;
@@ -228,7 +228,7 @@
         display: none;
     }
 
-    /* Hide floating icons on small screens to avoid clutter */
+     
 }
 
 /* ===============================
@@ -238,7 +238,7 @@
     padding: 0 5% 80px;
     background-color: #F8F9FA;
     margin-top: -60px;
-    /* Pulls the grid up into the dark hero section */
+     
     position: relative;
     z-index: 5;
 }
@@ -251,15 +251,15 @@
     margin: 0 auto;
 }
 
-/* --- The Focus Effect Logic --- */
-/* When hovering over the grid, dim all cards slightly */
+ 
+ 
 .focus-grid:hover .contact-card {
     opacity: 0.5;
     transform: scale(0.98) translateY(0);
     filter: blur(2px);
 }
 
-/* But keep the specifically hovered card bright and scaled up */
+ 
 .focus-grid .contact-card:hover {
     opacity: 1;
     transform: translateY(-15px) scale(1.02);
@@ -269,7 +269,7 @@
     border-color: rgba(255, 87, 34, 0.4);
 }
 
-/* Base Card Design */
+ 
 .contact-card {
     background: #ffffff;
     border-radius: 20px;
@@ -285,13 +285,13 @@
     overflow: hidden;
 }
 
-/* --- Highlighted HQ Card --- */
+ 
 .featured-card {
     background: #0A192F;
     color: #ffffff;
     border-color: #0A192F;
     transform: translateY(-15px);
-    /* Initially elevated */
+     
     box-shadow: 0 20px 40px rgba(10, 25, 47, 0.2);
 }
 
@@ -307,7 +307,7 @@
     color: #94a3b8 !important;
 }
 
-/* Apple-style Shine Sweep Layer for HQ Card */
+ 
 .card-shine-layer {
     position: absolute;
     top: 0;
@@ -334,7 +334,7 @@
     }
 }
 
-/* --- Icon Animations --- */
+ 
 .card-icon {
     width: 75px;
     height: 75px;
@@ -361,7 +361,7 @@
     color: #ffffff;
 }
 
-/* Floating animation for side cards */
+ 
 .float-icon {
     animation: gentleFloat 4s ease-in-out infinite;
 }
@@ -378,7 +378,7 @@
     }
 }
 
-/* Pulse animation for center card */
+ 
 .pulse-orange {
     animation: iconPulseHQ 2s infinite;
 }
@@ -397,7 +397,7 @@
     }
 }
 
-/* --- Typography & Links --- */
+ 
 .contact-card h3 {
     font-size: 1.5rem;
     color: #0A192F;
@@ -431,7 +431,7 @@
     color: #0A192F;
 }
 
-/* Cool Underline Expansion on Hover */
+ 
 .hover-underline {
     position: relative;
 }
@@ -460,7 +460,7 @@
     transform: translateX(5px);
 }
 
-/* --- Inline Button for HQ --- */
+ 
 .btn-outline-orange {
     position: relative;
     z-index: 2;
@@ -469,7 +469,7 @@
     gap: 10px;
     border: 2px solid #FF5722;
     color: #ffffff;
-    /* Adjusted for dark bg */
+     
     padding: 12px 28px;
     border-radius: 50px;
     font-weight: 700;
@@ -492,13 +492,13 @@
     transform: translate(4px, -4px);
 }
 
-/* Diagonal arrow movement */
+ 
 
 .mt-3 {
     margin-top: auto;
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 900px) {
     .featured-card {
         transform: translateY(0);
@@ -510,7 +510,7 @@
         transform: scale(1);
     }
 
-    /* Disable complex blur on mobile for performance */
+     
     .focus-grid .contact-card:hover {
         transform: translateY(-10px);
     }
@@ -539,7 +539,7 @@
   align-items: center;
 }
 
-/* --- LEFT SIDE: Form Styling --- */
+ 
 .form-left {
   flex: 1.2;
 }
@@ -577,7 +577,7 @@
   margin-bottom: 0;
 }
 
-/* Form Icons */
+ 
 .form-icon {
   position: absolute;
   left: 20px;
@@ -590,15 +590,15 @@
 }
 
 .textarea-icon {
-  top: 25px; /* Adjust for textarea height */
+  top: 25px;  
 }
 
-/* Inputs & Textarea */
+ 
 .form-control {
   width: 100%;
   background: #F8F9FA;
   border: 1px solid #e2e8f0;
-  padding: 18px 20px 18px 50px; /* Space for icon */
+  padding: 18px 20px 18px 50px;  
   border-radius: 12px;
   color: #0A192F;
   font-size: 1rem;
@@ -617,7 +617,7 @@ textarea.form-control {
   min-height: 150px;
 }
 
-/* Form Focus Animations */
+ 
 .form-control:focus {
   background: #ffffff;
   border-color: #FF5722;
@@ -626,12 +626,12 @@ textarea.form-control {
 }
 
 .form-group:focus-within .form-icon {
-  color: #FF5722; /* Icon turns orange when typing */
+  color: #FF5722;  
 }
 
-/* Submit Button */
+ 
 .btn-submit-form {
-  background: #0A192F; /* Dark Navy Base */
+  background: #0A192F;  
   color: white;
   border: none;
   padding: 18px 40px;
@@ -650,7 +650,7 @@ textarea.form-control {
 }
 
 .btn-submit-form:hover {
-  background: #FF5722; /* Turns Orange on Hover */
+  background: #FF5722;  
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(255, 87, 34, 0.3);
 }
@@ -663,7 +663,7 @@ textarea.form-control {
   transform: translateX(10px) translateY(-10px);
 }
 
-/* --- RIGHT SIDE: Visual & WhatsApp --- */
+ 
 .form-right {
   flex: 0.8;
 }
@@ -681,7 +681,7 @@ textarea.form-control {
   min-height: 500px;
 }
 
-/* Subtle Animated Grid Background inside the card */
+ 
 .card-tech-bg {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -737,12 +737,12 @@ textarea.form-control {
   margin-bottom: 30px;
 }
 
-/* WhatsApp Button */
+ 
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #25D366; /* Official WhatsApp Green */
+  background: #25D366;  
   color: white;
   padding: 15px 30px;
   border-radius: 12px;
@@ -763,7 +763,7 @@ textarea.form-control {
   font-size: 1.3rem;
 }
 
-/* Floating Image */
+ 
 .support-illustration {
   position: absolute;
   bottom: -30px;
@@ -790,7 +790,7 @@ textarea.form-control {
   box-shadow: 0 0 10px rgba(255, 51, 51, 0.2) !important;
 }
 
-/* Icon turns red when error occurs */
+ 
 .form-control.error-border + .form-icon,
 .form-group:has(.error-border) .form-icon {
   color: #ff3333 !important;
@@ -813,7 +813,7 @@ textarea.form-control {
   50% { transform: translateY(-15px) rotate(-5deg); }
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 900px) {
   .form-split-wrapper { flex-direction: column; }
   .form-row { flex-direction: column; gap: 0; }
@@ -826,7 +826,7 @@ textarea.form-control {
 =============================== */
 .global-network-section {
   padding: 100px 5%;
-  background-color: #030712; /* Space Dark Background */
+  background-color: #030712;  
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -853,7 +853,7 @@ textarea.form-control {
   margin: 0 auto;
 }
 
-/* --- Animated Map Wrapper --- */
+ 
 .map-wrapper {
   position: relative;
   max-width: 1000px;
@@ -875,11 +875,11 @@ textarea.form-control {
 .map-overlay {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(10, 25, 47, 0.85); /* Deep Navy Tint over the map */
+  background: rgba(10, 25, 47, 0.85);  
   z-index: 1;
 }
 
-/* --- Radar Pings on Map --- */
+ 
 .radar-ping {
   position: absolute;
   z-index: 2;
@@ -889,7 +889,7 @@ textarea.form-control {
   cursor: pointer;
 }
 
-/* Rough positioning based on standard world map layout */
+ 
 .ping-na { top: 35%; left: 25%; }
 .ping-eu { top: 30%; left: 52%; }
 .ping-asia { top: 55%; left: 72%; }
@@ -903,7 +903,7 @@ textarea.form-control {
   box-shadow: 0 0 10px #FF5722;
 }
 
-/* The expanding radar wave */
+ 
 .ping-dot::after {
   content: '';
   position: absolute;
@@ -942,7 +942,7 @@ textarea.form-control {
   transform: translateY(0);
 }
 
-/* --- Regional Hub Cards --- */
+ 
 .hubs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1023,10 +1023,10 @@ textarea.form-control {
   transform: translateX(5px);
 }
 
-/* Mobile Responsiveness */
+ 
 @media (max-width: 768px) {
   .map-wrapper { height: 300px; }
-  .ping-label { display: none; } /* Hide labels on mobile to avoid clutter */
+  .ping-label { display: none; }  
   .radar-ping:hover .ping-label { display: none; }
 }
 
@@ -1035,7 +1035,7 @@ textarea.form-control {
 =============================== */
 .faq-section {
   padding: 100px 5%;
-  background-color: #F8F9FA; /* Light gray to break the dark sections */
+  background-color: #F8F9FA;  
 }
 
 .faq-header {
@@ -1055,7 +1055,7 @@ textarea.form-control {
   font-size: 1.1rem;
 }
 
-/* --- Accordion Container --- */
+ 
 .faq-accordion {
   max-width: 800px;
   margin: 0 auto;
@@ -1064,7 +1064,7 @@ textarea.form-control {
   gap: 15px;
 }
 
-/* --- Individual FAQ Item --- */
+ 
 .faq-item {
   background: #ffffff;
   border-radius: 12px;
@@ -1080,7 +1080,7 @@ textarea.form-control {
   transform: translateY(-2px);
 }
 
-/* Question Button */
+ 
 .faq-question {
   width: 100%;
   display: flex;
@@ -1111,7 +1111,7 @@ textarea.form-control {
   color: #FF5722;
 }
 
-/* --- Answer Content (Hidden by default) --- */
+ 
 .faq-answer {
   max-height: 0;
   opacity: 0;
@@ -1124,10 +1124,10 @@ textarea.form-control {
   color: #64748b;
   font-size: 1.05rem;
   line-height: 1.7;
-  border-top: 1px solid transparent; /* Prevents layout jump when border is added in active state */
+  border-top: 1px solid transparent;  
 }
 
-/* --- ACTIVE STATE (When FAQ is open) --- */
+ 
 .faq-item.active {
   border-color: #FF5722;
   box-shadow: 0 15px 30px rgba(255, 87, 34, 0.1);
@@ -1151,7 +1151,7 @@ textarea.form-control {
   padding-top: 20px;
 }
 
-/* Mobile Responsiveness */
+ 
 @media (max-width: 768px) {
   .faq-question { font-size: 1.05rem; padding: 20px; }
   .answer-content { padding: 0 20px 20px; font-size: 0.95rem; }
@@ -1163,11 +1163,11 @@ textarea.form-control {
 .live-support-section {
   position: relative;
   padding: 100px 5%;
-  background-color: #0A192F; /* Atka Dark Navy */
+  background-color: #0A192F;  
   overflow: hidden;
 }
 
-/* Background Glows */
+ 
 .support-glow {
   position: absolute;
   width: 400px;
@@ -1184,7 +1184,7 @@ textarea.form-control {
 }
 
 .right-glow {
-  background: #2563eb; /* Deep blue highlight */
+  background: #2563eb;  
   bottom: -100px; right: -150px;
 }
 
@@ -1207,7 +1207,7 @@ textarea.form-control {
   font-size: 1.1rem;
 }
 
-/* --- Support Cards Grid --- */
+ 
 .support-channels-grid {
   position: relative;
   z-index: 1;
@@ -1238,7 +1238,7 @@ textarea.form-control {
   background: rgba(255, 255, 255, 0.05);
 }
 
-/* Status Badges */
+ 
 .channel-status {
   display: inline-flex;
   align-items: center;
@@ -1267,7 +1267,7 @@ textarea.form-control {
   100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
 }
 
-/* Card Icons & Profiles */
+ 
 .channel-icon {
   font-size: 3.5rem;
   color: #FF5722;
@@ -1305,11 +1305,11 @@ textarea.form-control {
   50% { transform: translateY(-10px); }
 }
 
-/* Typography */
+ 
 .channel-card h3 { color: #ffffff; font-size: 1.5rem; margin-bottom: 12px; font-weight: 800; }
 .channel-card p { color: #94a3b8; font-size: 1rem; line-height: 1.6; margin-bottom: 25px; }
 
-/* Details Links */
+ 
 .channel-details {
   display: flex;
   flex-direction: column;
@@ -1330,9 +1330,9 @@ textarea.form-control {
 .detail-link i { color: #FF5722; width: 20px; text-align: center; }
 .detail-link:hover { color: #FF5722; transform: translateX(5px); }
 
-/* Buttons */
+ 
 .full-width { width: 100%; justify-content: center; }
-.mt-auto { margin-top: auto; } /* Pushes button to bottom */
+.mt-auto { margin-top: auto; }  
 
 .vibrate-icon { transition: transform 0.3s; }
 .btn-solid-orange:hover .vibrate-icon {
@@ -1343,10 +1343,10 @@ textarea.form-control {
    Premium Action Buttons (Fix)
 =============================== */
 
-/* Base reset for both buttons to kill that default underline */
+ 
 .btn-solid-orange, 
 .btn-outline-glass {
-  text-decoration: none !important; /* Kills the ugly underline */
+  text-decoration: none !important;  
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1358,13 +1358,13 @@ textarea.form-control {
   text-align: center;
 }
 
-/* --- Primary Solid Orange Button --- */
+ 
 .btn-solid-orange {
   background-color: #FF5722;
-  color: #ffffff !important; /* Forces text to be white */
+  color: #ffffff !important;  
   border: none;
   padding: 16px 35px;
-  border-radius: 50px; /* Pill shape */
+  border-radius: 50px;  
   box-shadow: 0 10px 20px rgba(255, 87, 34, 0.2);
 }
 
@@ -1374,12 +1374,12 @@ textarea.form-control {
   box-shadow: 0 15px 30px rgba(255, 87, 34, 0.4);
 }
 
-/* --- Secondary Glass Outline Button --- */
+ 
 .btn-outline-glass {
   background-color: rgba(255, 255, 255, 0.03);
   border: 2px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff !important; /* Forces text to be white */
-  padding: 14px 35px; /* Slightly less padding to balance the border */
+  color: #ffffff !important;  
+  padding: 14px 35px;  
   border-radius: 50px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1387,15 +1387,15 @@ textarea.form-control {
 
 .btn-outline-glass:hover {
   background-color: #ffffff;
-  color: #0A192F !important; /* Text turns dark navy on hover */
+  color: #0A192F !important;  
   border-color: #ffffff;
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Fix for icons inside the glass button on hover */
+ 
 .btn-outline-glass:hover i {
-  color: #FF5722; /* Icon turns orange */
+  color: #FF5722;  
 }
 
 @keyframes shakePhone {
@@ -1406,7 +1406,7 @@ textarea.form-control {
   100% { transform: rotate(0deg); }
 }
 
-/* Mobile Responsiveness */
+ 
 @media (max-width: 768px) {
   .support-channels-grid { grid-template-columns: 1fr; }
   .channel-card { padding: 30px 20px; }
@@ -1418,7 +1418,7 @@ textarea.form-control {
 .contact-final-cta {
   position: relative;
   padding: 100px 5%;
-  background: linear-gradient(135deg, #FF5722 0%, #d84315 100%); /* Bold Atka Orange */
+  background: linear-gradient(135deg, #FF5722 0%, #d84315 100%);  
   text-align: center;
   overflow: hidden;
   display: flex;
@@ -1426,7 +1426,7 @@ textarea.form-control {
   align-items: center;
 }
 
-/* --- Animated Floating Parcels (Abstract Boxes) --- */
+ 
 .floating-parcel {
   position: absolute;
   border: 2px solid rgba(255, 255, 255, 0.15);
@@ -1447,7 +1447,7 @@ textarea.form-control {
   100% { transform: translateY(-1000px) rotate(360deg); opacity: 0; }
 }
 
-/* --- Content Styling --- */
+ 
 .cta-container {
   position: relative;
   z-index: 1;
@@ -1473,7 +1473,7 @@ textarea.form-control {
   margin-right: auto;
 }
 
-/* --- CTA Buttons --- */
+ 
 .cta-actions {
   display: flex;
   gap: 20px;
@@ -1481,10 +1481,10 @@ textarea.form-control {
   align-items: center;
 }
 
-/* Solid White Button */
+ 
 .btn-solid-white {
   background: #ffffff;
-  color: #FF5722 !important; /* Orange text on white */
+  color: #FF5722 !important;  
   padding: 18px 40px;
   border-radius: 50px;
   font-size: 1.1rem;
@@ -1498,19 +1498,19 @@ textarea.form-control {
 }
 
 .btn-solid-white:hover {
-  background: #0A192F; /* Turns Dark Navy on hover */
+  background: #0A192F;  
   color: #ffffff !important;
   transform: translateY(-4px);
   box-shadow: 0 15px 30px rgba(10, 25, 47, 0.3);
 }
 
-/* Flash Icon Animation */
+ 
 .flash-icon {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .btn-solid-white:hover .flash-icon {
-  color: #FF5722; /* Lightning bolt turns orange */
+  color: #FF5722;  
   animation: flashShake 0.5s ease-in-out infinite alternate;
 }
 
@@ -1519,7 +1519,7 @@ textarea.form-control {
   100% { transform: scale(1.2) rotate(10deg); }
 }
 
-/* Glass/Outline White Button */
+ 
 .btn-outline-white {
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid #ffffff;
@@ -1543,7 +1543,7 @@ textarea.form-control {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Mobile Responsiveness --- */
+ 
 @media (max-width: 768px) {
   .cta-content h2 { font-size: 2.5rem; }
   .cta-actions { flex-direction: column; gap: 15px; }
