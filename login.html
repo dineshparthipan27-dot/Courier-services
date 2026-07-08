@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="auth-split-container">
+        
+        <!-- LEFT: Cinematic Banner -->
+        <div class="auth-banner">
+            <!-- Background Image with Dark Overlay -->
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c83a7f?q=80&w=1200&auto=format&fit=crop" alt="Cargo Ship" class="banner-bg">
+            <div class="banner-overlay"></div>
+
+            <div class="banner-content">
+                <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+                
+                <div class="banner-text">
+                    
+                    <h1>Next-Gen<br><span class="text-orange">Logistics.</span></h1>
+                    <p>Experience real-time tracking, AI-driven routing, and seamless API integrations all in one powerful dashboard.</p>
+                </div>
+
+                <!-- Floating Glass Stats -->
+                <div class="glass-stats-wrapper">
+                    <div class="glass-stat-card delay-1">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <div>
+                            <h4>10k+</h4>
+                            <span>Active Fleets</span>
+                        </div>
+                    </div>
+                    <div class="glass-stat-card delay-2">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <div>
+                            <h4>120+</h4>
+                            <span>Countries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Form Area -->
+        <div class="auth-form-area">
+            <div class="form-container">
+                
+                <div class="form-header">
+                   <div class="logo">
+                <img src="./asset/stackly-logo (1) 2.webp" alt="Company Logo" class="logo-img">
+            </div>
+                    <p>Enter your credentials to access the dashboard.</p>
+                </div>
+
+                <!-- Sliding Pill Tabs -->
+                <div class="pill-tabs">
+                    <div class="pill-slider" id="pillSlider"></div>
+                    <button class="pill-btn active" id="btnShowLogin">Login</button>
+                    <button class="pill-btn" id="btnShowSignup">Sign Up</button>
+                </div>
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm" class="auth-form active-form" novalidate>
+                    
+                    <div class="input-group">
+                        <i class="fa-solid fa-user-shield group-icon"></i>
+                        <select id="loginRole" required>
+                            <!-- <option value="" disabled selected></option> -->
+                            <option value="admin">Admin </option>
+                            <option value="user">User</option>
+                        </select>
+                        <label>Portal Role</label>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope group-icon"></i>
+                        <input type="email" id="loginEmail" placeholder=" " required>
+                        <label>Business Email</label>
+                        <span class="error-msg" id="loginEmailError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock group-icon"></i>
+                        <input type="password" id="loginPassword" placeholder=" " required>
+                        <label>Password</label>
+                        <i class="fa-solid fa-eye toggle-pwd"></i>
+                        <span class="error-msg" id="loginPasswordError"></span>
+                    </div>
+
+                    <div class="form-actions">
+                        <label class="remember-checkbox">
+                            <input type="checkbox"> 
+                            <span class="checkmark"></span> Remember me
+                        </label>
+                        <a href="404.html" class="forgot-link">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Access Dashboard <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </button>
+                </form>
+
+                <!-- SIGNUP FORM -->
+                <form id="signupForm" class="auth-form" novalidate>
+                    
+                    <div class="input-group">
+                        <i class="fa-solid fa-building group-icon"></i>
+                        <input type="text" id="signupName" placeholder=" " required>
+                        <label>Company / Full Name</label>
+                        <span class="error-msg" id="signupNameError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope group-icon"></i>
+                        <input type="email" id="signupEmail" placeholder=" " required>
+                        <label>Business Email</label>
+                        <span class="error-msg" id="signupEmailError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock group-icon"></i>
+                        <input type="password" id="signupPassword" placeholder=" " required>
+                        <label>Create Password</label>
+                        <i class="fa-solid fa-eye toggle-pwd"></i>
+                        <span class="error-msg" id="signupPasswordError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-shield-check group-icon"></i>
+                        <input type="password" id="signupConfirm" placeholder=" " required>
+                        <label>Confirm Password</label>
+                        <span class="error-msg" id="signupConfirmError"></span>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Create Free Account <i class="fa-solid fa-bolt"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

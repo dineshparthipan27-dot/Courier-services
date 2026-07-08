@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="Courier.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    
+    
+  <header class="header">
+    
+     <a href="index.html" class="logo-container">
+            <img src="./asset/stackly-logo (1) 2.webp" alt="Company Logo" class="logo-img">
+        </a>
+    
+   <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="btn-login">Login</a></li>
+    </ul>
+
+    <div class="hamburger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </header>
+
+  <!-- ===============================
+       Section 1: Contact Hero (Highly Animated)
+  =============================== -->
+  <section class="contact-hero">
+    
+    <!-- Animated Tech Grid Background -->
+    <div class="hero-tech-grid"></div>
+    
+    <!-- Animated Glowing Orbs -->
+    <div class="hero-glow-orb orb-navy"></div>
+    <div class="hero-glow-orb orb-orange"></div>
+
+    <!-- Floating Glass Icons -->
+    <div class="floating-contact-icon icon-pin" data-aos="fade-down-right" data-aos-duration="1500" data-aos-delay="200">
+      <i class="fa-solid fa-location-dot"></i>
+    </div>
+    <div class="floating-contact-icon icon-mail" data-aos="fade-up-left" data-aos-duration="1500" data-aos-delay="400">
+      <i class="fa-solid fa-envelope-open-text"></i>
+    </div>
+
+    <div class="container contact-hero-content">
+      
+      <span class="contact-badge" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+        <i class="fa-solid fa-headset pulse-headset"></i> 24/7 Global Support
+      </span>
+      
+      <h1 data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1200">
+        Let's Get Your <span class="text-glow-orange">Cargo</span> Moving
+      </h1>
+      
+      <p data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+        Whether you need a custom quote, API integration support, or just want to say hi, our logistics experts are here to help you 365 days a year.
+      </p>
+      
+    </div>
+  </section>
+
+  <!-- ===============================
+       Section 2: Contact Info Cards (Animated Focus)
+  =============================== -->
+  <section class="contact-cards-section">
+    <div class="container">
+      
+      <!-- Adding 'focus-grid' to control sibling hover effects -->
+      <div class="contact-cards-grid focus-grid">
+        
+        <!-- Card 1: Sales & Booking -->
+        <div class="contact-card" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+          <div class="card-icon float-icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <h3>Sales & Quotes</h3>
+          <p>Get customized pricing for your high-volume e-commerce shipments.</p>
+          <a href="mailto:sales@speedx.com" class="contact-link hover-underline">sales@speedx.com</a>
+          <a href="tel:+919876543210" class="contact-link hover-underline">+91 98765 43210</a>
+        </div>
+
+        <!-- Card 2: Headquarters (Highlighted with Shine) -->
+        <div class="contact-card featured-card" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+          <!-- Glass Shine Layer -->
+          <div class="card-shine-layer"></div>
+          
+          <div class="card-icon pulse-orange">
+            <i class="fa-solid fa-building-flag"></i>
+          </div>
+          <h3>Headquarters</h3>
+          <p>123 Logistics Avenue, Tech Park Phase 2, Chennai, TN 600001, India.</p>
+          <a href="404.html" class="btn-outline-orange mt-3">
+            Get Directions <i class="fa-solid fa-location-arrow btn-arrow"></i>
+          </a>
+        </div>
+
+        <!-- Card 3: Tech Support -->
+        <div class="contact-card" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+          <div class="card-icon float-icon">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3>API & Tech Support</h3>
+          <p>Need help integrating our tracking API? Our dev team is standing by.</p>
+          <a href="mailto:api@speedx.com" class="contact-link hover-underline">api@speedx.com</a>
+          <a href="404.html" class="contact-link hover-underline">Read API Docs <i class="fa-solid fa-arrow-right slide-arrow"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       Section 3: Main Contact Form (Split Layout)
+  =============================== -->
+  <section class="contact-form-section">
+    <div class="container">
+      
+      <div class="form-split-wrapper">
+        
+        <!-- LEFT SIDE: The Form -->
+        <div class="form-left" data-aos="fade-right" data-aos-duration="1200">
+          <div class="form-header">
+            <h2>Send Us a <span class="highlight-orange">Message</span></h2>
+            <p>Fill out the form below and our logistics experts will get back to you within 2 hours.</p>
+          </div>
+
+         <!-- Main Contact Form (With Validation) -->
+          <form id="mainContactForm" class="main-contact-form" novalidate>
+            <!-- Two Column Row -->
+            <div class="form-row">
+              <div class="form-group" data-aos="fade-up" data-aos-delay="100">
+                <i class="fa-regular fa-user form-icon"></i>
+                <input type="text" id="contactName" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="form-group" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-regular fa-envelope form-icon"></i>
+                <input type="email" id="contactEmail" class="form-control" placeholder="Email Address" required>
+              </div>
+            </div>
+
+            <!-- Two Column Row -->
+            <div class="form-row">
+              <div class="form-group" data-aos="fade-up" data-aos-delay="300">
+                <i class="fa-solid fa-phone form-icon"></i>
+                <input type="tel" id="contactPhone" class="form-control" placeholder="Phone Number" required>
+              </div>
+              <div class="form-group" data-aos="fade-up" data-aos-delay="400">
+                <i class="fa-solid fa-box form-icon"></i>
+                <select id="contactService" class="form-control select-control" required>
+                  <option value="" disabled selected>Select Service Required</option>
+                  <option value="ecommerce">E-Commerce Fulfillment</option>
+                  <option value="freight">Heavy Freight & Cargo</option>
+                  <option value="api">API Integration</option>
+                  <option value="other">General Inquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Text Area -->
+            <div class="form-group" data-aos="fade-up" data-aos-delay="500">
+              <i class="fa-regular fa-comment-dots form-icon textarea-icon"></i>
+              <textarea id="contactMessage" class="form-control" rows="5" placeholder="Tell us about your shipping needs..." required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-submit-form" data-aos="zoom-in" data-aos-delay="600">
+              <span>Send Message</span>
+              <i class="fa-solid fa-paper-plane fly-arrow"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- RIGHT SIDE: Visuals & WhatsApp Support -->
+        <div class="form-right" data-aos="fade-left" data-aos-duration="1200">
+          
+          <div class="support-visual-card">
+            <!-- Animated Background Grid in Card -->
+            <div class="card-tech-bg"></div>
+            
+            <div class="support-content" data-aos="zoom-in" data-aos-delay="400">
+              <div class="live-status">
+                <span class="pulse-dot"></span> Customer Success Team is Online
+              </div>
+              
+              <h3>Need an instant reply?</h3>
+              <p>Skip the form and chat directly with our support team on WhatsApp. We usually reply in under 5 minutes.</p>
+              
+              <a href="404.html" target="_blank" class="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
+
+            <!-- Floating Illustration -->
+            <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=600&auto=format&fit=crop" alt="Customer Support" class="support-illustration floating-img">
+            
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===============================
+       Section 4: Global Network & Locations
+  =============================== -->
+  <section class="global-network-section">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="network-header" data-aos="fade-right" data-aos-duration="1000">
+        <h2>Our <span class="text-orange">Global</span> Footprint</h2>
+        <p>Operating in over 50+ countries with state-of-the-art automated fulfillment centers.</p>
+      </div>
+
+      <!-- Animated Map Container -->
+      <div class="map-wrapper" data-aos="zoom-in" data-aos-duration="1200">
+        <img src="https://images.unsplash.com/photo-1589519160732-57fc498494f8?q=80&w=1200&auto=format&fit=crop" alt="Global Map Base" class="map-base-img">
+        <div class="map-overlay"></div>
+
+        <!-- Radar Pings on Map (Positioned via CSS) -->
+        <div class="radar-ping ping-na" data-aos="zoom-in" data-aos-delay="400">
+          <div class="ping-dot"></div>
+          <span class="ping-label">New York, USA</span>
+        </div>
+        
+        <div class="radar-ping ping-eu" data-aos="zoom-in" data-aos-delay="600">
+          <div class="ping-dot"></div>
+          <span class="ping-label">Frankfurt, DE</span>
+        </div>
+
+        <div class="radar-ping ping-asia" data-aos="zoom-in" data-aos-delay="800">
+          <div class="ping-dot"></div>
+          <span class="ping-label">Chennai, IN</span>
+        </div>
+      </div>
+
+      <!-- Regional Hub Cards -->
+      <div class="hubs-grid">
+        
+        <!-- Americas Hub -->
+        <div class="hub-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fa-solid fa-earth-americas hub-icon"></i>
+          <h4>Americas HQ</h4>
+          <p>450 Logistics Blvd, Suite 100<br>New York, NY 10001, USA</p>
+          <a href="404.html" class="hub-link">Contact Americas Branch <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Europe Hub -->
+        <div class="hub-card" data-aos="fade-up" data-aos-delay="400">
+          <i class="fa-solid fa-earth-europe hub-icon"></i>
+          <h4>Europe Hub</h4>
+          <p>Cargo City Süd, Bldg 555<br>60549 Frankfurt, Germany</p>
+          <a href="404.html" class="hub-link">Contact Europe Branch <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Asia Pacific Hub -->
+        <div class="hub-card" data-aos="fade-up" data-aos-delay="600">
+          <i class="fa-solid fa-earth-asia hub-icon"></i>
+          <h4>Asia Pacific HQ</h4>
+          <p>SpeedX Tech Park Phase 2<br>Chennai, TN 600001, India</p>
+          <a href="404.html" class="hub-link">Contact APAC Branch <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===============================
+       Section 5: Interactive FAQ
+  =============================== -->
+  <section class="faq-section">
+    <div class="container">
+      
+      <div class="faq-header" data-aos="fade-down" data-aos-duration="1000">
+        <h2>Frequently Asked <span class="highlight-orange">Questions</span></h2>
+        <p>Quick answers to help you get your cargo moving faster.</p>
+      </div>
+
+      <div class="faq-accordion">
+        
+        <!-- FAQ Item 1 -->
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+          <button class="faq-question">
+            <span>How do I track my high-value shipments?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              You can track your shipments in real-time using our dedicated tracking portal or by integrating our SpeedX Live Tracking API directly into your application. You will receive an SMS and Email at every major transit point.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+          <button class="faq-question">
+            <span>Do you offer custom API integrations for E-commerce?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              Yes, absolutely! We provide seamless plugins for Shopify, WooCommerce, and Magento. For custom platforms, our REST API documentation gives your developers everything they need to automate label generation and tracking.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+          <button class="faq-question">
+            <span>What are the maximum weight limits for Air Freight?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              Our standard air freight allows up to 1,000 kg per pallet. For oversized or overweight cargo, we offer specialized charter services. Please contact our sales team for custom heavy-freight quotes.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+          <button class="faq-question">
+            <span>How does the insurance process work for damaged goods?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="answer-content">
+              All our shipments come with basic liability coverage. For high-value items, we highly recommend our comprehensive cargo insurance, which covers 100% of the declared value. Claims are processed within 48 business hours.
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="live-support-section">
+    
+    <div class="support-glow left-glow"></div>
+    <div class="support-glow right-glow"></div>
+
+    <div class="container">
+      
+      <div class="support-header" data-aos="fade-down" data-aos-duration="1000">
+        <h2>Always Here to <span class="text-orange">Help You</span></h2>
+        <p>Choose the right channel to get your issues resolved instantly.</p>
+      </div>
+
+      <div class="support-channels-grid">
+        
+        <div class="channel-card" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="100">
+          <div class="channel-status">
+            <span class="status-dot green-pulse"></span> Live Now
+          </div>
+          
+          <div class="channel-icon float-y">
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+          
+          <h3>24/7 Global Helpline</h3>
+          <p>For urgent shipment tracking, customs clearance issues, or immediate operational support.</p>
+          
+          <div class="channel-details">
+            <a href="tel:+18005550199" class="detail-link"><i class="fa-solid fa-phone"></i> +1 (800) 555-0199</a>
+            <a href="mailto:support@speedx.com" class="detail-link"><i class="fa-solid fa-envelope"></i> support@speedx.com</a>
+          </div>
+
+          <a href="404.html" class="btn-solid-orange full-width mt-auto">
+            Call Support Now <i class="fa-solid fa-phone-volume vibrate-icon"></i>
+          </a>
+        </div>
+
+        <div class="channel-card premium-card" data-aos="flip-right" data-aos-duration="1200" data-aos-delay="300">
+          <div class="channel-status">
+            <span class="status-dot blue-pulse"></span> B2B Enterprise
+          </div>
+          
+          <div class="manager-profile">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=150&auto=format&fit=crop" alt="Account Manager" class="manager-img">
+            <div class="manager-badge"><i class="fa-solid fa-star"></i> Pro</div>
+          </div>
+          
+          <h3>Dedicated Account Manager</h3>
+          <p>Personalized support for high-volume enterprise clients and e-commerce partners.</p>
+          
+          <div class="channel-details">
+            <a href="#" class="detail-link"><i class="fa-solid fa-calendar-check"></i> Book a 1-on-1 Strategy Call</a>
+            <a href="#" class="detail-link"><i class="fa-solid fa-file-contract"></i> Custom SLA Agreements</a>
+          </div>
+
+          <a href="404.html" class="btn-outline-glass full-width mt-auto">
+            Contact Sales <i class="fa-solid fa-arrow-right slide-arrow"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact-final-cta" data-aos="zoom-out-up" data-aos-duration="1200">
+    
+    <div class="floating-parcel parcel-1"></div>
+    <div class="floating-parcel parcel-2"></div>
+    <div class="floating-parcel parcel-3"></div>
+    <div class="floating-parcel parcel-4"></div>
+
+    <div class="container cta-container">
+      <div class="cta-content">
+        <h2 data-aos="fade-down" data-aos-delay="200">Ready to Start Shipping Today?</h2>
+        
+        <p data-aos="fade-up" data-aos-delay="400">
+          Join thousands of businesses globally who trust SpeedX for their supply chain. No setup fees, instant API access, and lightning-fast deliveries.
+        </p>
+        
+        <div class="cta-actions" data-aos="zoom-in" data-aos-delay="600">
+          <a href="404.html" class="btn-solid-white">
+            Create Free Account <i class="fa-solid fa-bolt flash-icon"></i>
+          </a>
+          <a href="404.html" class="btn-outline-white">
+            Get Custom Quote <i class="fa-solid fa-calculator"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer-section">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & About -->
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+           <a href="index.html" class="logo-container">
+            <img src="./asset/stackly-logo (1) 2.webp" alt="Company Logo" class="logo-img">
+        </a>
+          <p class="footer-about">
+            Your trusted global logistics partner. We deliver speed, security, and reliability across borders every single day.
+          </p>
+         <div class="social-links">
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+          <h3>Contact Us</h3>
+        <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> 123 Logistics Park, Salem City, 636351</li>
+            <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+            <li><i class="fa-solid fa-envelope"></i> support@speedx.com</li>
+            <li><i class="fa-solid fa-clock"></i> Mon - Sat: 9:00 AM - 6:30 PM</li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <!-- Column 4: Newsletter -->
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get the latest logistics news and exclusive offers.</p>
+          
+          <!-- Added ID to form and input -->
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email">
+            <button type="submit" id="newsletterBtn">➔</button>
+          </form>
+          
+          <!-- Validation Message Element -->
+          <p id="newsletterMsg" class="newsletter-msg"></p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom (Copyright & Policies) -->
+      <div class="footer-bottom" data-aos="fade-in" data-aos-delay="600">
+        <p>&copy; 2026 SpeedX Courier Services. All rights reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+
+  <script>
+  // ===============================
+  // Main Contact Form Validation
+  // ===============================
+  document.getElementById('mainContactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent page reload
+    
+    // Get form fields
+    const nameObj = document.getElementById('contactName');
+    const emailObj = document.getElementById('contactEmail');
+    const phoneObj = document.getElementById('contactPhone');
+    const serviceObj = document.getElementById('contactService');
+    const messageObj = document.getElementById('contactMessage');
+    
+    let isValid = true;
+
+    // Helper function to show error
+    function showError(element, placeholderText) {
+      element.classList.add('error-border', 'error-shake');
+      element.value = '';
+      
+      if(element.tagName !== 'SELECT') {
+        element.placeholder = placeholderText;
+      }
+      
+      // Remove shake quickly so it can shake again if clicked
+      setTimeout(() => element.classList.remove('error-shake'), 400);
+      
+      // Remove red border after 3 seconds
+      setTimeout(() => {
+        element.classList.remove('error-border');
+        if(element.tagName !== 'SELECT') {
+          element.placeholder = element.getAttribute('data-original-placeholder') || placeholderText;
+        }
+      }, 3000);
+      
+      isValid = false;
+    }
+
+    // 1. Validate Name
+    if (nameObj.value.trim() === '') {
+      nameObj.setAttribute('data-original-placeholder', 'Your Name');
+      showError(nameObj, 'Please enter your name');
+    }
+
+    // 2. Validate Email (Regex)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailObj.value.trim())) {
+      emailObj.setAttribute('data-original-placeholder', 'Email Address');
+      showError(emailObj, 'Valid email required');
+    }
+
+    // 3. Validate Phone (Regex - minimum 7 digits)
+    const phoneRegex = /^[+]?[\d\s-]{7,15}$/;
+    if (!phoneRegex.test(phoneObj.value.trim())) {
+      phoneObj.setAttribute('data-original-placeholder', 'Phone Number');
+      showError(phoneObj, 'Valid phone required');
+    }
+
+    // 4. Validate Select Dropdown
+    if (serviceObj.value === '') {
+      showError(serviceObj, '');
+    }
+
+    // 5. Validate Message
+    if (messageObj.value.trim() === '') {
+      messageObj.setAttribute('data-original-placeholder', 'Tell us about your shipping needs...');
+      showError(messageObj, 'Message cannot be empty');
+    }
+
+    // Final Success Check
+    if (isValid) {
+      // alert("Thanks, " + nameObj.value + "! Your message has been sent successfully. Our team will contact you shortly.");
+      this.reset();
+      window.location.href = '404.html' // Clear the form completely
+    }
+  });
+
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Close all other open FAQs (Optional: Remove this block if you want multiple open at once)
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      // If the clicked one wasn't active, open it
+      if (!isActive) {
+        item.classList.add('active');
+        // Set max-height to the scrollHeight of the content for smooth CSS transition
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+  <script src="main.js"></script>
+</body>
+</html>

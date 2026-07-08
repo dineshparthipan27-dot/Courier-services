@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SpeedX | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ===============================
+           SpeedX Premium Theme Variables
+        =============================== */
+        :root {
+            --primary-orange: #FF5722;
+            --primary-orange-light: rgba(255, 87, 34, 0.1);
+            --primary-orange-hover: #e64a19;
+
+            --navy-dark: #030712;
+            --navy-main: #0A192F;
+            --navy-light: #112240;
+
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --bg-color: #F8F9FA;
+
+            --border-color: #e2e8f0;
+            --card-bg: #ffffff;
+
+            --success: #22c55e;
+            --success-light: #dcfce7;
+            --danger: #ef4444;
+            --danger-light: #fee2e2;
+            --warning: #f59e0b;
+            --warning-light: #fef3c7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* ===============================
+           Layout & Sidebar
+        =============================== */
+        .dashboard-container {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 280px;
+            background-color: var(--navy-main);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+            position: fixed;
+            height: 100vh;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(3, 7, 18, 0.8);
+            z-index: 999;
+            backdrop-filter: blur(4px);
+        }
+
+        .sidebar-overlay.active {
+            display: block;
+        }
+
+        .sidebar-header {
+            padding: 30px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: var(--navy-dark);
+        }
+
+        .logo-da {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-da i {
+            color: var(--primary-orange);
+            font-size: 28px;
+        }
+
+        .close-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 25px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .menu-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 30px;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            cursor: pointer;
+        }
+
+        .menu-link i {
+            font-size: 18px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .menu-link:hover {
+            background-color: var(--navy-light);
+            color: #FFFFFF;
+        }
+
+        .menu-link.active {
+            background-color: var(--primary-orange-light);
+            color: #FFFFFF;
+            border-left: 4px solid var(--primary-orange);
+        }
+
+        .menu-link.active i {
+            color: var(--primary-orange);
+        }
+
+        .sidebar-bottom {
+            padding: 20px 0 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logout-btn {
+            color: #ef4444;
+        }
+
+        .logout-btn:hover {
+            background-color: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            border-left: 4px solid #ef4444;
+        }
+
+        /* ===============================
+           Main Content & Header
+        =============================== */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-left: 280px;
+            min-height: 100vh;
+            width: calc(100% - 280px);
+        }
+
+        .top-header {
+            background-color: var(--card-bg);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 998;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: var(--primary-orange-light);
+            color: var(--primary-orange);
+            border: none;
+            padding: 12px 14px;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .greeting h1 {
+            font-size: 24px;
+            color: var(--navy-main);
+            font-weight: 800;
+        }
+
+        .welcome-name {
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: right;
+        }
+
+        .user-role {
+            font-size: 12px;
+            color: var(--primary-orange);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+        }
+
+        .user-email {
+            font-size: 14px;
+            color: var(--navy-main);
+            font-weight: 700;
+            display: block;
+        }
+
+        .user-avatar i {
+            font-size: 45px;
+            color: var(--navy-light);
+        }
+
+        /* ===============================
+           View Sections & Animations
+        =============================== */
+        .view-section {
+            display: none;
+            padding: 40px;
+            animation: fadeIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .view-section.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: var(--navy-main);
+            border-left: 5px solid var(--primary-orange);
+            padding-left: 15px;
+            font-weight: 800;
+        }
+
+        .scroll-anim {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-anim.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===============================
+           Stats Grid & Cards
+        =============================== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.3s ease, border-color 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-orange);
+        }
+
+        .stat-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .stat-details h3 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: var(--navy-main);
+            font-weight: 800;
+        }
+
+        .stat-details p {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .content-box {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-color);
+            width: 100%;
+        }
+
+        .two-col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 350px;
+            width: 100%;
+        }
+
+        /* ===============================
+           Forms & Inputs
+        =============================== */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--navy-main);
+            margin-bottom: 8px;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            outline: none;
+            font-size: 15px;
+            background: #f8fafc;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: var(--primary-orange);
+            background: #ffffff;
+            box-shadow: 0 0 0 4px var(--primary-orange-light);
+        }
+
+        .error-msg {
+            color: var(--danger);
+            font-size: 12px;
+            margin-top: 6px;
+            display: none;
+            font-weight: 700;
+        }
+
+        .input-error {
+            border-color: var(--danger) !important;
+            background: var(--danger-light) !important;
+        }
+
+        .success-msg {
+            color: var(--success);
+            background: var(--success-light);
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            font-size: 15px;
+            font-weight: 700;
+            display: none;
+            text-align: center;
+            border: 1px solid #bbf7d0;
+        }
+
+        /* Buttons */
+        .main-btn,
+        .action-btn {
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .main-btn {
+            background: var(--navy-main);
+            color: white;
+            padding: 16px 24px;
+            width: 100%;
+            font-size: 16px;
+            border: none;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .main-btn:hover {
+            background: var(--primary-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
+        }
+
+        .action-btn {
+            background: var(--primary-orange-light);
+            color: var(--primary-orange);
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .action-btn:hover {
+            background: var(--primary-orange);
+            color: #FFF;
+        }
+
+        /* ===============================
+           Timeline & Tables
+        =============================== */
+        .timeline {
+            margin-top: 25px;
+            border-left: 3px solid #e2e8f0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary-orange);
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h4 {
+            font-size: 16px;
+            color: var(--navy-main);
+            margin-bottom: 6px;
+            font-weight: 800;
+        }
+
+        .timeline-item p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .time-badge {
+            font-size: 12px;
+            background: #f1f5f9;
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-weight: 700;
+            color: var(--navy-light);
+            margin-right: 8px;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            min-width: 700px;
+        }
+
+        th,
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f8fafc;
+            color: var(--text-muted);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .status {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .status.delivered {
+            background: var(--success-light);
+            color: var(--success);
+        }
+
+        .status.transit {
+            background: var(--warning-light);
+            color: var(--warning);
+        }
+
+        .status.alert {
+            background: var(--danger-light);
+            color: var(--danger);
+        }
+
+        /* ===============================
+           Media Grid
+        =============================== */
+        .media-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .media-item {
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--card-bg);
+            transition: 0.3s;
+        }
+
+        .media-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            border-color: var(--primary-orange);
+        }
+
+        .media-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background: #cbd5e1;
+        }
+
+        .media-info {
+            padding: 20px;
+        }
+
+        .media-info h4 {
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: var(--navy-main);
+            font-weight: 800;
+        }
+
+        .media-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .media-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .media-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 12px;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn-approve {
+            background: var(--success-light);
+            color: var(--success);
+        }
+
+        .btn-approve:hover {
+            background: #bbf7d0;
+        }
+
+        .btn-reject {
+            background: var(--danger-light);
+            color: var(--danger);
+        }
+
+        .btn-reject:hover {
+            background: #fecaca;
+        }
+
+        /* ===============================
+           Responsive
+        =============================== */
+        @media (max-width: 1024px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .menu-toggle,
+            .close-btn {
+                display: block;
+            }
+
+            .two-col-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .top-header {
+                padding: 20px;
+            }
+
+            .view-section {
+                padding: 20px;
+            }
+
+            .user-info {
+                display: none;
+            }
+
+            .greeting h1 {
+                font-size: 20px;
+            }
+        }
+
+         .logo-img {
+            width: 150px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .logo-da {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-color);
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo-da i {
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-header">
+                   <div class="logo-da">
+                        <img src="./asset/stackly-logo (1) 2.webp" alt="Company Logo" class="logo-img">
+                    </div>
+                    <button class="close-btn" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                <ul class="sidebar-menu">
+                    <li><a class="menu-link active" data-target="dashboard-view">
+                            <i class="fa-solid fa-chart-pie"></i> Overview
+                        </a></li>
+                    <li><a class="menu-link" data-target="dispatch-view">
+                            <i class="fa-solid fa-boxes-packing"></i> Dispatch Center
+                        </a></li>
+                    <li><a class="menu-link" data-target="fleet-view">
+                            <i class="fa-solid fa-truck-moving"></i> Fleet Tracking
+                        </a></li>
+                    <li><a class="menu-link" data-target="routes-view">
+                            <i class="fa-solid fa-route"></i> Delivery Routes
+                        </a></li>
+                    <li><a class="menu-link" data-target="warehouse-view">
+                            <i class="fa-solid fa-warehouse"></i> Warehouse Inv
+                        </a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="login.html" class="menu-link logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>Logout
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="openSidebar">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                    <div class="greeting">
+                        <h1 id="page-title">Overview <span class="welcome-name">| Admin</span></h1>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="user-info">
+                            <span class="user-role">Logistics Manager</span>
+                            <span class="user-email" id="displayEmail">admin@speedx.com</span>
+                        </div>
+                        <div class="user-avatar">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div id="dashboard-view" class="view-section active">
+                <section class="stats-grid scroll-anim">
+                    <div class="stat-card">
+                        <div class="stat-icon"
+                            style="background: var(--primary-orange-light); color: var(--primary-orange);">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>24,892</h3>
+                            <p>Active Shipments</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: var(--success-light); color: var(--success);">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>98.5%</h3>
+                            <p>On-Time Delivery</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #e0e7ff; color: #4f46e5;">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>$1.2M</h3>
+                            <p>Revenue (This Month)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-box scroll-anim">
+                    <h2 class="section-title">Global Shipment Volume (Live)</h2>
+                    <div class="chart-container">
+                        <canvas id="volumeChart"></canvas>
+                    </div>
+                </section>
+            </div>
+
+            <div id="dispatch-view" class="view-section">
+                <section class="stats-grid scroll-anim">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: var(--danger-light); color: var(--danger);">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>12</h3>
+                            <p>Critical Alerts</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: var(--warning-light); color: var(--warning);">
+                            <i class="fa-solid fa-dolly"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>45</h3>
+                            <p>Pending Dispatches</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="two-col-grid">
+                    <section class="content-box scroll-anim">
+                        <h2 class="section-title">Create New Dispatch</h2>
+
+                        <form id="dispatchForm" novalidate>
+                            <div id="formSuccess" class="success-msg">
+                                <i class="fa-solid fa-circle-check"></i> Dispatch created and assigned successfully!
+                            </div>
+
+                            <div class="input-group">
+                                <label>Tracking ID / Order Number</label>
+                                <input type="text" id="trackingInput" placeholder="e.g. SPDX-8839201" required>
+                                <div class="error-msg" id="trackingError">Tracking ID must be at least 5 characters.
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label>Service Type</label>
+                                <select id="serviceSelect" required>
+                                    <option value="" selected disabled>Select Logistics Service</option>
+                                    <option value="express">Express Air Freight</option>
+                                    <option value="standard">Standard Ground</option>
+                                    <option value="sea">Sea Cargo (LCL)</option>
+                                    <option value="lastmile">Last-Mile E-commerce</option>
+                                </select>
+                                <div class="error-msg" id="serviceError">Please select a service type.</div>
+                            </div>
+
+                            <div class="input-group">
+                                <label>Priority Level</label>
+                                <select id="prioritySelect" required>
+                                    <option value="" selected disabled>Select Delivery Priority</option>
+                                    <option value="critical">Critical (Same Day)</option>
+                                    <option value="high">High (Next Day)</option>
+                                    <option value="normal">Normal (3-5 Days)</option>
+                                </select>
+                                <div class="error-msg" id="priorityError">Please assign a priority level.</div>
+                            </div>
+
+                            <button type="submit" class="main-btn">
+                                Generate Label & Dispatch <i class="fa-solid fa-barcode"></i>
+                            </button>
+                        </form>
+                    </section>
+
+                    <section class="content-box scroll-anim">
+                        <h2 class="section-title">Live Operations Feed</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h4><span class="time-badge">14:30</span> Fleet Departure</h4>
+                                <p><strong>Truck #402</strong> departed from <span
+                                        style="color: var(--primary-orange);">New York Hub</span> heading to Boston.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4><span class="time-badge">13:15</span> Custom Clearance</h4>
+                                <p>Container <i>#CX-9920</i> cleared customs at Frankfurt Airport.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4><span class="time-badge">11:45</span> Weather Alert</h4>
+                                <p>Heavy rain warning for Route 66. Expect 2-hour delays for ground fleet.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div id="fleet-view" class="view-section">
+                <section class="content-box scroll-anim">
+                    <h2 class="section-title">Active Fleet Status</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Vehicle ID</th>
+                                    <th>Driver Name</th>
+                                    <th>Current Route</th>
+                                    <th>Payload Cap.</th>
+                                    <th>Live Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>TRK-8802</strong></td>
+                                    <td><i class="fa-solid fa-id-card text-muted"></i> Michael Chen</td>
+                                    <td>LAX <i class="fa-solid fa-arrow-right text-muted"></i> SFO</td>
+                                    <td><strong>85%</strong></td>
+                                    <td><span class="status transit">In Transit</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>VAN-1044</strong></td>
+                                    <td><i class="fa-solid fa-id-card text-muted"></i> Sarah Jenkins</td>
+                                    <td>Local Zone A (NY)</td>
+                                    <td>40%</td>
+                                    <td><span class="status delivered">Delivering</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>AIR-77X</strong></td>
+                                    <td><i class="fa-solid fa-plane text-muted"></i> Cargo Flight</td>
+                                    <td>LHR <i class="fa-solid fa-arrow-right text-muted"></i> JFK</td>
+                                    <td>-</td>
+                                    <td><span class="status alert">Delayed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div id="routes-view" class="view-section">
+                <section class="content-box scroll-anim">
+                    <h2 class="section-title">Upcoming Delivery Schedules</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Est. Time</th>
+                                    <th>Route Code / Destination</th>
+                                    <th>Transport Type</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>08:00 AM</strong></td>
+                                    <td>RT-99A (Silicon Valley Tech Park)</td>
+                                    <td><i class="fa-solid fa-truck text-muted"></i> Heavy Freight</td>
+                                    <td><span class="status delivered">Ready for Loading</span></td>
+                                    <td><a href="404.html" class="action-btn">Modify Route</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>11:30 AM</strong></td>
+                                    <td>RT-12B (Downtown Commercial)</td>
+                                    <td><i class="fa-solid fa-van-shuttle text-muted"></i> Sprinter Van</td>
+                                    <td><span class="status transit">Staging Area</span></td>
+                                    <td><a href="404.html" class="action-btn">Modify Route</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>02:00 PM</strong></td>
+                                    <td>RT-05C (Harbor Port LCL)</td>
+                                    <td><i class="fa-solid fa-ship text-muted"></i> Sea Cargo</td>
+                                    <td><span class="status alert">Doc Pending</span></td>
+                                    <td><a href="404.html" class="action-btn">Modify Route</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div id="warehouse-view" class="view-section">
+                <section class="stats-grid scroll-anim">
+                    <div class="stat-card">
+                        <div class="stat-icon"
+                            style="background: var(--primary-orange-light); color: var(--primary-orange);">
+                            <i class="fa-solid fa-pallet"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>14,592</h3>
+                            <p>Pallets in Storage</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #e0f2fe; color: #0284c7;">
+                            <i class="fa-solid fa-warehouse"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>82%</h3>
+                            <p>Warehouse Capacity Used</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-box scroll-anim">
+                    <h2 class="section-title">Assets Pending Clearance</h2>
+                    <div class="media-gallery">
+                        <div class="media-item">
+                            <img src="./asset/cob2.webp"
+                                alt="Containers" class="media-img">
+                            <div class="media-info">
+                                <h4>Shipment #BL-4992 (Electronics)</h4>
+                                <div class="media-meta">
+                                    <span><i class="fa-solid fa-weight-hanging"></i> 2.4 Tons</span>
+                                    <span>Zone A</span>
+                                </div>
+                                <div class="media-actions">
+                                    <a href="404.html" class="media-btn btn-approve"><i class="fa-solid fa-check"></i>
+                                        Clear</a>
+                                    <a href="404.html" class="media-btn btn-reject"><i class="fa-solid fa-hand-paper"></i>
+                                        Hold</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <img src="./asset/cob3.webp"
+                                alt="Pallets" class="media-img">
+                            <div class="media-info">
+                                <h4>Shipment #AMZ-110 (Apparel)</h4>
+                                <div class="media-meta">
+                                    <span><i class="fa-solid fa-weight-hanging"></i> 450 Kg</span>
+                                    <span>Zone C</span>
+                                </div>
+                                <div class="media-actions">
+                                    <a href="404.html" class="media-btn btn-approve"><i class="fa-solid fa-check"></i>
+                                        Clear</a>
+                                    <a href="404.html" class="media-btn btn-reject"><i class="fa-solid fa-hand-paper"></i>
+                                        Hold</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <img src="./asset/cob4.webp"
+                                alt="Boxes" class="media-img">
+                            <div class="media-info">
+                                <h4>Shipment #MED-88X (Pharma)</h4>
+                                <div class="media-meta">
+                                    <span style="color:var(--danger);"><i class="fa-solid fa-snowflake"></i> Temp
+                                        Controlled</span>
+                                </div>
+                                <div class="media-actions">
+                                    <a href="404.html" class="media-btn btn-approve"><i class="fa-solid fa-check"></i>
+                                        Clear</a>
+                                    <a href="404.html" class="media-btn btn-reject"><i class="fa-solid fa-hand-paper"></i>
+                                        Hold</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // Set User Name from LocalStorage (Fallback to Admin)
+        const emailValue = localStorage.getItem("UserMail") || "admin@speedx.com";
+        const extractedName = emailValue.split("@")[0];
+        const formattedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+
+        document.getElementById("displayEmail").textContent = emailValue;
+        const welcomeEl = document.querySelector(".welcome-name");
+        if (welcomeEl) { welcomeEl.textContent = `| Welcome, ${formattedName} 👋`; }
+
+        // Sidebar Mobile Toggle
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+        const openSidebarBtn = document.getElementById('openSidebar');
+        const closeSidebarBtn = document.getElementById('closeSidebar');
+
+        function openSidebar() { sidebar.classList.add('active'); overlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeSidebar() { sidebar.classList.remove('active'); overlay.classList.remove('active'); document.body.style.overflow = 'auto'; }
+
+        openSidebarBtn.addEventListener('click', openSidebar);
+        closeSidebarBtn.addEventListener('click', closeSidebar);
+        overlay.addEventListener('click', closeSidebar);
+
+        // View Switching Logic
+        const menuLinks = document.querySelectorAll('.sidebar-menu .menu-link');
+        const views = document.querySelectorAll('.view-section');
+        const pageTitle = document.getElementById('page-title');
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                if (this.classList.contains('active')) return;
+
+                menuLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                views.forEach(v => v.classList.remove('active'));
+
+                const targetId = this.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+
+                // Update Header Title
+                let titleText = this.innerText.trim();
+                pageTitle.innerHTML = `${titleText} <span class="welcome-name">| Admin</span>`;
+
+                if (window.innerWidth <= 1024) { closeSidebar(); }
+                triggerAnimations();
+            });
+        });
+
+        // Chart.js Setup for Volume
+        const ctx = document.getElementById('volumeChart').getContext('2d');
+        const volumeChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Parcels Shipped',
+                    data: [12500, 18200, 15000, 22000, 28000, 19000, 14000],
+                    borderColor: '#0A192F',
+                    backgroundColor: 'rgba(10, 25, 47, 0.05)',
+                    borderWidth: 3, fill: true, tension: 0.4,
+                    pointBackgroundColor: '#FF5722', pointBorderColor: '#ffffff',
+                    pointBorderWidth: 2, pointRadius: 6
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, grid: { color: '#e2e8f0' } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Scroll Animations (Intersection Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.classList.add('show'); }
+            });
+        }, { threshold: 0.1 });
+
+        function triggerAnimations() {
+            const animElements = document.querySelectorAll('.scroll-anim');
+            animElements.forEach(el => {
+                el.classList.remove('show');
+                observer.observe(el);
+            });
+        }
+        triggerAnimations();
+
+        // ===============================
+        // Form Validation for Dispatch
+        // ===============================
+        document.getElementById('dispatchForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const trackingInput = document.getElementById('trackingInput');
+            const serviceSelect = document.getElementById('serviceSelect');
+            const prioritySelect = document.getElementById('prioritySelect');
+
+            const trackingError = document.getElementById('trackingError');
+            const serviceError = document.getElementById('serviceError');
+            const priorityError = document.getElementById('priorityError');
+            const formSuccess = document.getElementById('formSuccess');
+
+            let isValid = true;
+
+            // Reset States
+            trackingInput.classList.remove('input-error');
+            serviceSelect.classList.remove('input-error');
+            prioritySelect.classList.remove('input-error');
+            trackingError.style.display = 'none';
+            serviceError.style.display = 'none';
+            priorityError.style.display = 'none';
+            formSuccess.style.display = 'none';
+
+            // Validate Tracking ID
+            if (trackingInput.value.trim().length < 5) {
+                trackingInput.classList.add('input-error');
+                trackingError.style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate Service Select
+            if (serviceSelect.value === '') {
+                serviceSelect.classList.add('input-error');
+                serviceError.style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate Priority Select
+            if (prioritySelect.value === '') {
+                prioritySelect.classList.add('input-error');
+                priorityError.style.display = 'block';
+                isValid = false;
+            }
+
+            // Success Action
+            if (isValid) {
+                const btn = this.querySelector('button');
+                btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
+
+                setTimeout(() => {
+                    formSuccess.style.display = 'block';
+                    btn.innerHTML = 'Generate Label & Dispatch <i class="fa-solid fa-barcode"></i>';
+                    this.reset();
+
+                    // Hide success message after 3 seconds
+                    setTimeout(() => formSuccess.style.display = 'none', 3000);
+                    window.location.href = '404.html'
+                }, 500);
+            }
+        });
+    </script>
+</body>
+
+</html>

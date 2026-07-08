@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blob</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="Courier.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    
+ 
+  <header class="header">
+    
+     <a href="index.html" class="logo-container">
+            <img src="./asset/stackly-logo (1) 2.webp" alt="Company Logo" class="logo-img">
+        </a>
+    
+   <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="btn-login">Login</a></li>
+    </ul>
+
+    <div class="hamburger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </header>
+
+  <!-- ===============================
+       Blog Hero Section (Split Layout)
+  =============================== -->
+  <section class="blog-hero">
+    
+    <!-- Animated Glowing Orbs -->
+    <div class="hero-glow-orb orb-navy"></div>
+    <div class="hero-glow-orb orb-orange"></div>
+
+    <div class="container blog-hero-container">
+      
+      <!-- LEFT SIDE: Content & Search -->
+      <div class="blog-hero-content">
+        <span class="blog-badge" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
+          <i class="fa-solid fa-fire"></i> SpeedX Insights
+        </span>
+        
+        <h1 data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">
+          Logistics & <span class="highlight-orange">Industry</span> Trends
+        </h1>
+        
+        <p data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
+          Expert tips, tech updates, and the future of global shipping. Stay ahead of the curve with our in-depth articles.
+        </p>
+        
+        <!-- Interactive Search Box -->
+       <!-- Interactive Search Box (With Form Validation) -->
+        <form id="blogSearchForm" class="blog-search-box" data-aos="zoom-out-up" data-aos-delay="800" data-aos-duration="1000">
+          <!-- Added id and required attribute -->
+          <input type="text" id="searchInput" placeholder="Search for articles, news..." autocomplete="off">
+          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+
+      <!-- RIGHT SIDE: Animated Image & Floating Card -->
+      <div class="blog-hero-visual" data-aos="zoom-in-left" data-aos-delay="400" data-aos-duration="1200">
+        <div class="blog-img-wrapper">
+          <!-- Main Image -->
+          <img src="./asset/cob.webp" alt="Logistics Insights" class="blog-main-img">
+          
+          <!-- Floating "New Post" Notification -->
+          <div class="float-article-card" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000">
+            <div class="float-icon-box pulse-orange">
+              <i class="fa-solid fa-newspaper"></i>
+            </div>
+            <div class="float-text">
+              <span>Just Published</span>
+              <strong>Global Supply Chain 2026</strong>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===============================
+       Featured Blog Article (Large Card)
+  =============================== -->
+  <section class="featured-blog-section">
+    <div class="container">
+      
+      <!-- Outer wrapper zooms up -->
+      <div class="featured-card-wrapper" data-aos="zoom-in-up" data-aos-duration="1200">
+        <!-- Abstract Glowing Background Shadow -->
+        <div class="card-glow-bg"></div>
+        
+        <div class="featured-card">
+          
+          <!-- LEFT: Image Side -->
+          <div class="featured-img" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+            <img src="./asset/cob3.webp" alt="Featured Post">
+            <span class="feat-tag pulse-tag"><i class="fa-solid fa-star"></i> Featured</span>
+          </div>
+          
+          <!-- RIGHT: Content Side with Staggered AOS -->
+          <div class="featured-text">
+            
+            <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+              <span class="post-meta">Oct 24, 2026 • 8 Min Read</span>
+              <h2>The AI Revolution in Autonomous Delivery Fleet</h2>
+            </div>
+            
+            <p data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
+              How artificial intelligence is helping us optimize routes, reduce fuel consumption, and deliver faster than ever before. Explore our latest tech stack and the future of global logistics.
+            </p>
+            
+            <!-- Interactive Author Info & Button -->
+            <div class="featured-footer" data-aos="fade-left" data-aos-delay="700" data-aos-duration="1000">
+              <div class="author-info">
+                <img src="./asset/co.webp" alt="Author" class="author-img">
+                <span><strong>David Anderson</strong><br>CEO, SpeedX</span>
+              </div>
+              <a href="404.html" class="btn-read-more">Read Article <i class="fa-solid fa-arrow-right-long arrow-slide"></i></a>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+
+  <!-- ===============================
+       Main Blog Grid (3-Column Animated)
+  =============================== -->
+  <section class="blog-grid-section">
+    <div class="container">
+      
+      <div class="blog-grid">
+        
+        <!-- Blog Card 1 -->
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+          <!-- The Magic Shine Layer -->
+          <div class="shine-layer"></div>
+          
+          <div class="card-img-wrapper">
+            <img src="./asset/cob1.webp" alt="Last Mile Delivery">
+            <span class="card-badge pulse-badge">Logistics</span>
+          </div>
+          <div class="card-content">
+            <span class="card-date"><i class="fa-regular fa-calendar"></i> July 5, 2026</span>
+            <h3>Mastering Last-Mile Delivery in Urban Areas</h3>
+            <p>Discover how micro-fulfillment centers are reducing delivery times by 40% in tier-1 cities.</p>
+            <a href="404.html" class="card-btn">Read More <i class="fa-solid fa-arrow-right bounce-arrow"></i></a>
+          </div>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+          <div class="shine-layer"></div>
+          
+          <div class="card-img-wrapper">
+            <img src="./asset/cob2.webp" alt="E-Commerce Fulfillment">
+            <span class="card-badge pulse-badge">E-Commerce</span>
+          </div>
+          <div class="card-content">
+            <span class="card-date"><i class="fa-regular fa-calendar"></i> June 28, 2026</span>
+            <h3>How to Handle Seasonal E-Commerce Spikes</h3>
+            <p>Prepare your supply chain for the holiday season rush with our predictive AI models and scalable warehousing.</p>
+            <a href="404.html" class="card-btn">Read More <i class="fa-solid fa-arrow-right bounce-arrow"></i></a>
+          </div>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+          <div class="shine-layer"></div>
+          
+          <div class="card-img-wrapper">
+            <img src="./asset/cob3.webp" alt="API Integration">
+            <span class="card-badge pulse-badge">Tech & AI</span>
+          </div>
+          <div class="card-content">
+            <span class="card-date"><i class="fa-regular fa-calendar"></i> June 15, 2026</span>
+            <h3>Integrating the SpeedX API with Shopify</h3>
+            <p>A developer's step-by-step guide to automating your store's shipping and live tracking in under 10 minutes.</p>
+            <a href="404.html" class="card-btn">Read More <i class="fa-solid fa-arrow-right bounce-arrow"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Animated Load More Button -->
+      <div class="load-more-container" data-aos="zoom-in" data-aos-delay="700">
+        <a href="404.html" class="btn-outline-navy load-btn">
+          Load More Articles <i class="fa-solid fa-rotate spin-icon"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===============================
+       Newsletter Subscription: Join the Network
+  =============================== -->
+  <section class="newsletter-section">
+    
+    <!-- Animated Floating Background Elements -->
+    <i class="fa-solid fa-paper-plane float-bg plane-1"></i>
+    <i class="fa-regular fa-envelope float-bg envelope-1"></i>
+    <i class="fa-solid fa-plane float-bg plane-2"></i>
+
+    <div class="container">
+      <div class="newsletter-wrapper" data-aos="zoom-in" data-aos-duration="1000">
+        
+        <div class="newsletter-content">
+          <span class="newsletter-badge" data-aos="fade-down" data-aos-delay="200">
+            <i class="fa-solid fa-satellite-dish"></i> Stay Connected
+          </span>
+          <h2 data-aos="fade-up" data-aos-delay="300">Join the SpeedX Network</h2>
+          <p data-aos="fade-up" data-aos-delay="400">
+            Get the latest logistics trends, API updates, and global supply chain news delivered straight to your inbox every week.
+          </p>
+        </div>
+
+       
+       <!-- Subscription Form -->
+        <form id="newsletterForm1" class="newsletter-form1" data-aos="fade-up" data-aos-delay="500" novalidate>
+          <div class="newsletter-input-wrapper">
+           
+            <input type="email" id="newsletterEmail1" placeholder="Enter your business email" autocomplete="off">
+            
+            <button type="submit" class="btn-subscribe">
+              Subscribe <i class="fa-solid fa-paper-plane send-icon"></i>
+            </button>
+          </div>
+        </form>
+
+        <p class="spam-notice" data-aos="fade-in" data-aos-delay="600">
+          <i class="fa-solid fa-shield-halved"></i> We respect your privacy. No spam, ever.
+        </p>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       Trending / Most Read Section
+  =============================== -->
+  <section class="trending-section">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="trending-header" data-aos="fade-right" data-aos-duration="1000">
+        <h2><i class="fa-solid fa-arrow-trend-up pulse-icon-orange"></i> Trending Now</h2>
+        <p>The most read and shared articles this week.</p>
+      </div>
+
+      <div class="trending-grid">
+        
+        <!-- LEFT: Rank #1 (Main Trending Card) -->
+        <div class="trend-main-card" data-aos="zoom-in-right" data-aos-duration="1200">
+          <div class="trend-rank-bg">01</div> <!-- Giant Background Number -->
+          
+          <div class="trend-img-box">
+            <img src="./asset/cob4.webp" alt="Trending Top">
+            <div class="trend-tag">Most Popular</div>
+          </div>
+          
+          <div class="trend-content">
+            <span class="trend-meta">Tech & AI • 12 Min Read</span>
+            <h3>How Blockchain is Securing the Global Supply Chain</h3>
+            <p>Dive deep into our new decentralized ledger system that prevents cargo theft and ensures 100% transparency from origin to destination.</p>
+            <a href="404.html" class="btn-read-inline">Read Article <i class="fa-solid fa-arrow-right slide-arrow"></i></a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Ranks #2 to #4 (List Layout) -->
+        <div class="trend-list-wrapper">
+          
+          <!-- Rank #2 -->
+          <div class="trend-list-item" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+            <div class="trend-list-rank">02</div>
+            <div class="trend-list-img">
+              <img src="./asset/cob5.webp" alt="Drone Delivery">
+            </div>
+            <div class="trend-list-text">
+              <span class="trend-meta">Innovations</span>
+              <h4>Drone Deliveries: Are We Ready for the Skies?</h4>
+              <a href="404.html" class="read-link">Read More</a>
+            </div>
+          </div>
+
+          <!-- Rank #3 -->
+          <div class="trend-list-item" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
+            <div class="trend-list-rank">03</div>
+            <div class="trend-list-img">
+              <img src="./asset/cob6.webp" alt="Green Logistics">
+            </div>
+            <div class="trend-list-text">
+              <span class="trend-meta">Sustainability</span>
+              <h4>Switching to a 100% Electric Fleet by 2030</h4>
+              <a href="404.html" class="read-link">Read More</a>
+            </div>
+          </div>
+
+          <!-- Rank #4 -->
+          <div class="trend-list-item" data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
+            <div class="trend-list-rank">04</div>
+            <div class="trend-list-img">
+              <img src="./asset/cob7.webp" alt="Warehouse Automation">
+            </div>
+            <div class="trend-list-text">
+              <span class="trend-meta">Logistics</span>
+              <h4>Inside Our Fully Automated Dark Warehouses</h4>
+              <a href="404.html" class="read-link">Read More</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       Final Blog CTA: Want to Partner?
+  =============================== -->
+  <section class="blog-cta-section" data-aos="zoom-out-up" data-aos-duration="1200">
+    
+    <!-- Animated Background Glows -->
+    <div class="cta-glow orb-1"></div>
+    <div class="cta-glow orb-2"></div>
+
+    <div class="container cta-container">
+      <div class="blog-cta-content">
+        <span class="cta-badge" data-aos="fade-down" data-aos-delay="200">
+          <i class="fa-solid fa-handshake"></i> Let's Grow Together
+        </span>
+        
+        <h2 data-aos="fade-up" data-aos-delay="300">Ready to Optimize Your Supply Chain?</h2>
+        
+        <p data-aos="fade-up" data-aos-delay="400">
+          Whether you're a scaling e-commerce brand or a global enterprise, our API-driven logistics network is built to handle your unique demands.
+        </p>
+        
+        <div class="cta-action-btns" data-aos="zoom-in" data-aos-delay="600">
+          <a href="404.html" class="btn-solid-orange">
+            Partner With Us <i class="fa-solid fa-arrow-right-long action-arrow"></i>
+          </a>
+          <a href="404.html" class="btn-outline-glass">
+            Talk to an Expert <i class="fa-solid fa-headset"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       Audio Articles & Podcast Section
+  =============================== -->
+  <section class="blog-podcast-section">
+    <div class="container">
+      
+      <div class="podcast-wrapper" data-aos="zoom-in" data-aos-duration="1200">
+        
+        <!-- Left Side: Visuals & Spinning Animation -->
+        <div class="podcast-visual" data-aos="fade-right" data-aos-delay="300">
+          <div class="vinyl-record">
+            <img src="./asset/cob8.webp" alt="Podcast Cover" class="cover-art">
+            <div class="vinyl-disc spin-disc"></div> <!-- Animated Spinning Disc -->
+          </div>
+          
+          <!-- Animated Audio Equalizer -->
+          <div class="audio-equalizer">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+            <span class="bar bar-4"></span>
+            <span class="bar bar-5"></span>
+          </div>
+        </div>
+
+        <!-- Right Side: Content & Tracklist -->
+        <div class="podcast-content" data-aos="fade-left" data-aos-delay="500">
+          <span class="podcast-badge"><i class="fa-solid fa-headphones"></i> Listen on the go</span>
+          <h2>SpeedX Supply Chain Podcast</h2>
+          <p>Don't have time to read? Listen to our top articles and expert interviews while you commute.</p>
+          
+          <div class="track-list">
+            
+            <!-- Track 1 -->
+            <div class="track-item" data-aos="flip-up" data-aos-delay="600">
+              <a href="404.html" class="btn-play-circle"><i class="fa-solid fa-play"></i></a>
+              <div class="track-info">
+                <h4>Ep 12: The Future of Drone Deliveries</h4>
+                <span>15 Mins • Audio Article</span>
+              </div>
+              <div class="track-wave"><i class="fa-solid fa-water"></i></div>
+            </div>
+
+            <!-- Track 2 -->
+            <div class="track-item" data-aos="flip-up" data-aos-delay="800">
+              <a href="404.html" class="btn-play-circle"><i class="fa-solid fa-play"></i></a>
+              <div class="track-info">
+                <h4>Ep 11: Interview with CEO, David Anderson</h4>
+                <span>42 Mins • Exclusive Guest</span>
+              </div>
+              <div class="track-wave"><i class="fa-solid fa-water"></i></div>
+            </div>
+
+          </div>
+
+          <a href="404.html" class="btn-spotify">
+            <i class="fa-brands fa-spotify"></i> Listen on Spotify
+          </a>
+        </div>
+
+      </div>
+      
+    </div>
+  </section>
+
+
+
+  <footer class="footer-section">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & About -->
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+           <a href="index.html" class="logo-container">
+            <img src="./asset/stackly-logo (1) 2.webp" alt="Company Logo" class="logo-img">
+        </a>
+          <p class="footer-about">
+            Your trusted global logistics partner. We deliver speed, security, and reliability across borders every single day.
+          </p>
+         <div class="social-links">
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+          <h3>Contact Us</h3>
+        <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> 123 Logistics Park, Salem City, 636351</li>
+            <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+            <li><i class="fa-solid fa-envelope"></i> support@speedx.com</li>
+            <li><i class="fa-solid fa-clock"></i> Mon - Sat: 9:00 AM - 6:30 PM</li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <!-- Column 4: Newsletter -->
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get the latest logistics news and exclusive offers.</p>
+          
+          <!-- Added ID to form and input -->
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email">
+            <button type="submit" id="newsletterBtn">➔</button>
+          </form>
+          
+          <!-- Validation Message Element -->
+          <p id="newsletterMsg" class="newsletter-msg"></p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom (Copyright & Policies) -->
+      <div class="footer-bottom" data-aos="fade-in" data-aos-delay="600">
+        <p>&copy; 2026 SpeedX Courier Services. All rights reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+
+  <script>
+  // ===============================
+  // Search Form Validation Logic
+  // ===============================
+  document.getElementById('blogSearchForm').addEventListener('submit', function(event) {
+    // Prevent the default form submission (page reload)
+    event.preventDefault(); 
+    
+    const searchInput = document.getElementById('searchInput');
+    const searchForm = document.getElementById('blogSearchForm');
+    const query = searchInput.value.trim(); // Remove extra spaces
+    
+    if (query === '') {
+      // If empty: Add error classes for Red border and Shake animation
+      searchForm.classList.add('error-shake', 'error-border');
+      searchInput.placeholder = "Please enter a keyword to search...";
+      
+      // Remove the classes after 1 second so the animation can run again if clicked empty again
+      setTimeout(() => {
+        searchForm.classList.remove('error-shake', 'error-border');
+        searchInput.placeholder = "Search for articles, news...";
+      }, 1000);
+      
+    } else {
+      // If valid: You can redirect to your search results page here
+      console.log('Searching for:', query);
+      
+      // Example of how you would redirect:
+      // window.location.href = 'search-results.html?q=' + encodeURIComponent(query);
+      
+      // For demo, just showing an alert
+      // alert("Searching our logistics database for: " + query);
+      searchInput.value = '';
+       window.location.href = '404.html'
+       // Clear input after successful search
+    }
+  });
+
+  // ===============================
+  // Newsletter Form Validation
+  // ===============================
+  document.getElementById('newsletterForm1').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    
+    const emailInput = document.getElementById('newsletterEmail1');
+    const wrapper = document.querySelector('.newsletter-input-wrapper');
+    const emailValue = emailInput.value.trim();
+    
+    // Regex check for valid email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailRegex.test(emailValue)) {
+      // Invalid Email: Add shake animation & red border
+      wrapper.classList.add('error-shake', 'error-border');
+      emailInput.value = '';
+      emailInput.placeholder = "Please enter a valid email format...";
+      
+      // Remove error state after 1.5 seconds
+      setTimeout(() => {
+        wrapper.classList.remove('error-shake', 'error-border');
+        emailInput.placeholder = "Enter your business email";
+      }, 1500);
+      
+    } else {
+      // Success
+      // alert("Welcome to the network! Subscribed with: " + emailValue);
+      emailInput.value = '';
+      emailInput.placeholder = "Successfully Subscribed!";
+      window.location.href = '404.html'
+    }
+  });
+</script>
+ 
+</script>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  overflow-x: hidden; /* Mobile-la horizontal scroll varama thadukka */
+  background-color: #F8F9FA;
+}
+
+ .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 10px 20px;
+  }
+
+
+  .logo-img {
+      width: 160px;
+      transition: transform 0.3s ease;
+  }
+
+
+  .logo-img:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+  }
+
+/* Dummy content spacing */
+.content {
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header Styling */
+.header {
+  background-color: #0A192F; /* Deep Navy Blue */
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  color: #FF5722; /* Vibrant Orange */
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ffffff;
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #FF5722;
+}
+
+/* Hamburger Menu Button (Hidden on Desktop) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger div {
+  width: 28px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Login Button Styling */
+.btn-login {
+  background-color: #FF5722;
+  color: #ffffff !important;
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #FF5722;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: transparent;
+  color: #FF5722 !important;
+}
+
+/* --- Mobile Responsive CSS --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger in mobile */
+  }
+  
+  .nav-links {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #0A192F;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%); 
+    transition: transform 0.4s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+  }
+  
+  /* JS intha class-a add pannumbothu menu ulla varum */
+  .nav-links.nav-active {
+    transform: translateX(0);
+  }
+  
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-links li a {
+    font-size: 20px;
+  }
+
+  /* Hamburger Menu Animation (X shape) */
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Mobile-la Login button chinna adjustments */
+  .nav-links li .btn-login {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 40px; /* Mobile-la thottu click panna easy-a irukka konjam perusa */
+  }
+}
+
+
+/* ===============================
+   Footer Section Styling
+=============================== */
+.footer-section {
+  background-color: #050c18; /* Extra Deep Navy Blue */
+  color: #a0aec0;
+  padding: 80px 5% 20px;
+  position: relative;
+  border-top: 5px solid #FF5722; /* Atka Orange top border */
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+/* --- Column 1: Brand --- */
+.footer-logo {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.footer-logo span {
+  color: #FF5722;
+}
+
+.footer-about {
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #FF5722;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+}
+
+/* --- Headings --- */
+.footer-col h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background-color: #FF5722;
+  border-radius: 2px;
+}
+
+/* --- Lists (Links & Contact) --- */
+.footer-links, .footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li, .footer-contact li {
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.footer-links a {
+  color: #a0aec0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links li:hover {
+  transform: translateX(5px);
+}
+
+.footer-links a:hover {
+  color: #FF5722;
+}
+
+/* --- Newsletter Form --- */
+.footer-col p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 10px 15px;
+  color: #ffffff;
+  outline: none;
+}
+
+.newsletter-form input::placeholder {
+  color: #cbd5e1;
+}
+
+.newsletter-form button {
+  background-color: #FF5722;
+  color: #ffffff;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #e64a19;
+  transform: scale(1.1);
+}
+
+/* --- Footer Bottom --- */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.bottom-links a {
+  color: #a0aec0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.bottom-links a:hover {
+  color: #FF5722;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* Stacks everything into 1 column on mobile */
+    gap: 40px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+/* ===============================
+   Newsletter Validation Styles
+=============================== */
+.newsletter-msg {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.newsletter-msg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.msg-error-text {
+  color: #ff4d4d; /* Red for error */
+}
+
+.msg-success-text {
+  color: #4CAF50; /* Green for success */
+}
+
+/* Shake Animation for Newsletter Form */
+.shake-form {
+  animation: shakeError 0.4s cubic-bezier(.36,.07,.19,.97) both;
+  border-color: #ff4d4d !important;
+}
+
+/* Re-using the shake keyframes if you already have it, otherwise here it is */
+@keyframes shakeError {
+  10%, 90% { transform: translate3d(-2px, 0, 0); }
+  20%, 80% { transform: translate3d(4px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
+  40%, 60% { transform: translate3d(6px, 0, 0); }
+}
+
+.footer-contact li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start; /* Keeps text aligned if address is long */
+  gap: 12px;
+  transition: transform 0.3s ease;
+}
+
+.footer-contact li i {
+  color: #FF5722; /* Atka Orange */
+  font-size: 1.1rem;
+  margin-top: 4px; /* Adjusts icon to match text baseline */
+  width: 20px; /* Ensures all icons take exact same space */
+  text-align: center;
+}
