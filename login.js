@@ -1,7 +1,7 @@
 /* ===============================
    Premium Auth Logic
 =============================== */
- 
+
 const btnLogin = document.getElementById('btnShowLogin');
 const btnSignup = document.getElementById('btnShowSignup');
 const pillSlider = document.getElementById('pillSlider');
@@ -24,21 +24,21 @@ btnSignup.addEventListener('click', () => {
     loginForm.classList.remove('active-form');
 });
 
- 
+
 document.querySelectorAll(".toggle-pwd").forEach(icon => {
     icon.addEventListener("click", () => {
         const input = icon.previousElementSibling;
         if (input.type === "password") {
-            input.type = "text"; 
+            input.type = "text";
             icon.classList.replace("fa-eye", "fa-eye-slash");
         } else {
-            input.type = "password"; 
+            input.type = "password";
             icon.classList.replace("fa-eye-slash", "fa-eye");
         }
     });
 });
 
- 
+
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function showError(inputId, errorId, msg) {
     const input = document.getElementById(inputId);
@@ -53,23 +53,23 @@ function clearError(inputId, errorId) {
     document.getElementById(errorId).style.display = "none";
 }
 
- 
+
 function loading(btn, text) {
     btn.disabled = true;
     btn.dataset.original = btn.innerHTML;
     btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> ${text}`;
 }
 
- 
+
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let isValid = true;
-    
+
     const role = document.getElementById("loginRole").value;
     const email = document.getElementById("loginEmail").value.trim();
     const pwd = document.getElementById("loginPassword").value;
 
-    if (!role) {  isValid = false; }
+    if (!role) { isValid = false; }
     if (!emailRegex.test(email)) { showError("loginEmail", "loginEmailError", "Valid email required"); isValid = false; } else clearError("loginEmail", "loginEmailError");
     if (pwd.length < 1) { showError("loginPassword", "loginPasswordError", "Password required"); isValid = false; } else clearError("loginPassword", "loginPasswordError");
 
@@ -88,12 +88,12 @@ loginForm.addEventListener("submit", (e) => {
     );
 
     setTimeout(() => {
-        if(role === "admin") window.location.href = "admin.html";
+        if (role === "admin") window.location.href = "admin.html";
         else window.location.href = "user.html";
     }, 1500);
 });
 
- 
+
 signupForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let isValid = true;
@@ -114,7 +114,7 @@ signupForm.addEventListener("submit", (e) => {
     loading(btn, "Creating Account...");
 
     setTimeout(() => {
- 
+
         btn.innerHTML = btn.dataset.original;
         btn.disabled = false;
         signupForm.reset();

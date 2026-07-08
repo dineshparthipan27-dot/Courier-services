@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SpeedX | User Dashboard</title>
 
-     
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-     
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
@@ -822,7 +822,7 @@
                 grid-template-columns: 1fr;
             }
 
-             
+
             .stat-card {
                 padding: 20px;
             }
@@ -832,7 +832,7 @@
                 gap: 15px;
             }
 
-             
+
             .delivery-stepper {
                 flex-direction: column;
                 gap: 25px;
@@ -875,7 +875,7 @@
                 font-size: 13px;
             }
 
-             
+
             .tracking-search-box {
                 flex-direction: column;
                 padding: 10px;
@@ -886,7 +886,7 @@
                 padding: 15px;
             }
 
-             
+
             .shipment-header-actions {
                 flex-direction: column;
                 align-items: stretch;
@@ -903,7 +903,7 @@
                 display: none;
             }
 
-             
+
             .greeting h1 {
                 font-size: 18px;
             }
@@ -935,10 +935,10 @@
                 height: 250px;
             }
 
-             
+
         }
 
-         .logo-img {
+        .logo-img {
             width: 150px;
         }
 
@@ -964,14 +964,14 @@
 
 <body>
     <div class="dashboard-container">
-         
+
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-         
+
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-top">
                 <div class="sidebar-header">
-                     <div class="logo-da">
+                    <div class="logo-da">
                         <img src="./asset/stackly-logo (1) 2.webp" alt="Company Logo" class="logo-img">
                     </div>
                     <button class="close-btn" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
@@ -1000,9 +1000,9 @@
             </div>
         </aside>
 
-         
+
         <main class="main-content">
-             
+
             <header class="top-header">
                 <div class="header-left">
                     <button class="menu-toggle" id="openSidebar">
@@ -1018,7 +1018,7 @@
                             <span class="user-role">Business Account</span>
                             <span class="user-email" id="displayEmail">user@company.com</span>
                         </div>
-                      
+
                     </div>
                 </div>
             </header>
@@ -1115,7 +1115,7 @@
                         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Track Package</button>
                     </form>
 
-                     
+
                     <div class="tracking-result" id="trackingResult">
                         <div class="result-header">
                             <div>
@@ -1126,7 +1126,7 @@
                             <span class="status transit"><i class="fa-solid fa-truck-fast"></i> In Transit</span>
                         </div>
 
-                         
+
                         <div class="delivery-stepper">
                             <div class="step completed">
                                 <div class="step-icon"><i class="fa-solid fa-box"></i></div>
@@ -1283,8 +1283,8 @@
                                     <td>Large Box</td>
                                     <td><span class="status delivered"><i class="fa-solid fa-check"></i>
                                             Delivered</span></td>
-                                    <td><a href="404.html" class="action-link" style="color:var(--text-muted);">Receipt <i
-                                                class="fa-solid fa-download"></i></a></td>
+                                    <td><a href="404.html" class="action-link" style="color:var(--text-muted);">Receipt
+                                            <i class="fa-solid fa-download"></i></a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1299,7 +1299,7 @@
          JAVASCRIPT LOGIC
     =============================== -->
     <script>
- 
+
         const emailValue = localStorage.getItem("UserMail") || "david.smith@company.com";
         const extractedName = emailValue.split("@")[0].split('.')[0];
         const formattedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
@@ -1308,7 +1308,7 @@
         const welcomeEl = document.querySelector(".welcome-name");
         if (welcomeEl) { welcomeEl.textContent = `| Welcome, ${formattedName} 👋`; }
 
- 
+
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('sidebarOverlay');
         const openSidebarBtn = document.getElementById('openSidebar');
@@ -1321,7 +1321,7 @@
         closeSidebarBtn.addEventListener('click', closeSidebar);
         overlay.addEventListener('click', closeSidebar);
 
- 
+
         const menuLinks = document.querySelectorAll('.sidebar-menu .menu-link');
         const views = document.querySelectorAll('.view-section');
         const pageTitle = document.getElementById('page-title');
@@ -1337,7 +1337,7 @@
                 const targetId = this.getAttribute('data-target');
                 document.getElementById(targetId).classList.add('active');
 
- 
+
                 let titleText = this.innerText.trim();
                 if (window.innerWidth > 576) {
                     pageTitle.innerHTML = `Dashboard <span class="welcome-name">| ${titleText}</span>`;
@@ -1350,7 +1350,7 @@
             });
         });
 
- 
+
         const ctx = document.getElementById('userVolumeChart').getContext('2d');
         const userVolumeChart = new Chart(ctx, {
             type: 'bar',
@@ -1374,7 +1374,7 @@
             }
         });
 
- 
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) { entry.target.classList.add('show'); }
@@ -1390,9 +1390,9 @@
         }
         triggerAnimations();
 
- 
- 
- 
+
+
+
         document.getElementById('trackingForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const input = document.getElementById('trackInput');
@@ -1413,9 +1413,9 @@
             }
         });
 
- 
- 
- 
+
+
+
         document.getElementById('pickupForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -1431,14 +1431,14 @@
             const successMsg = document.getElementById('pickupSuccess');
             let isValid = true;
 
- 
+
             Object.values(inputs).forEach(input => {
                 input.classList.remove('input-error');
                 document.getElementById(`${input.id}Error`).style.display = 'none';
             });
             successMsg.style.display = 'none';
 
- 
+
             Object.keys(inputs).forEach(key => {
                 if (inputs[key].value.trim() === '') {
                     inputs[key].classList.add('input-error');
@@ -1447,7 +1447,7 @@
                 }
             });
 
- 
+
             if (inputs.date.value) {
                 const selectedDate = new Date(inputs.date.value);
                 const today = new Date();
@@ -1460,7 +1460,7 @@
                 }
             }
 
- 
+
             if (isValid) {
                 const btn = this.querySelector('button');
                 btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';

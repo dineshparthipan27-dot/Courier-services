@@ -441,7 +441,7 @@
             border: 1px solid #bbf7d0;
         }
 
-         
+
         .main-btn,
         .action-btn {
             cursor: pointer;
@@ -720,7 +720,7 @@
             }
         }
 
-         .logo-img {
+        .logo-img {
             width: 150px;
         }
 
@@ -751,7 +751,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-top">
                 <div class="sidebar-header">
-                   <div class="logo-da">
+                    <div class="logo-da">
                         <img src="./asset/stackly-logo (1) 2.webp" alt="Company Logo" class="logo-img">
                     </div>
                     <button class="close-btn" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
@@ -1045,8 +1045,7 @@
                     <h2 class="section-title">Assets Pending Clearance</h2>
                     <div class="media-gallery">
                         <div class="media-item">
-                            <img src="./asset/cob2.webp"
-                                alt="Containers" class="media-img">
+                            <img src="./asset/cob2.webp" alt="Containers" class="media-img">
                             <div class="media-info">
                                 <h4>Shipment #BL-4992 (Electronics)</h4>
                                 <div class="media-meta">
@@ -1056,14 +1055,14 @@
                                 <div class="media-actions">
                                     <a href="404.html" class="media-btn btn-approve"><i class="fa-solid fa-check"></i>
                                         Clear</a>
-                                    <a href="404.html" class="media-btn btn-reject"><i class="fa-solid fa-hand-paper"></i>
+                                    <a href="404.html" class="media-btn btn-reject"><i
+                                            class="fa-solid fa-hand-paper"></i>
                                         Hold</a>
                                 </div>
                             </div>
                         </div>
                         <div class="media-item">
-                            <img src="./asset/cob3.webp"
-                                alt="Pallets" class="media-img">
+                            <img src="./asset/cob3.webp" alt="Pallets" class="media-img">
                             <div class="media-info">
                                 <h4>Shipment #AMZ-110 (Apparel)</h4>
                                 <div class="media-meta">
@@ -1073,14 +1072,14 @@
                                 <div class="media-actions">
                                     <a href="404.html" class="media-btn btn-approve"><i class="fa-solid fa-check"></i>
                                         Clear</a>
-                                    <a href="404.html" class="media-btn btn-reject"><i class="fa-solid fa-hand-paper"></i>
+                                    <a href="404.html" class="media-btn btn-reject"><i
+                                            class="fa-solid fa-hand-paper"></i>
                                         Hold</a>
                                 </div>
                             </div>
                         </div>
                         <div class="media-item">
-                            <img src="./asset/cob4.webp"
-                                alt="Boxes" class="media-img">
+                            <img src="./asset/cob4.webp" alt="Boxes" class="media-img">
                             <div class="media-info">
                                 <h4>Shipment #MED-88X (Pharma)</h4>
                                 <div class="media-meta">
@@ -1090,7 +1089,8 @@
                                 <div class="media-actions">
                                     <a href="404.html" class="media-btn btn-approve"><i class="fa-solid fa-check"></i>
                                         Clear</a>
-                                    <a href="404.html" class="media-btn btn-reject"><i class="fa-solid fa-hand-paper"></i>
+                                    <a href="404.html" class="media-btn btn-reject"><i
+                                            class="fa-solid fa-hand-paper"></i>
                                         Hold</a>
                                 </div>
                             </div>
@@ -1103,7 +1103,7 @@
     </div>
 
     <script>
- 
+
         const emailValue = localStorage.getItem("UserMail") || "admin@speedx.com";
         const extractedName = emailValue.split("@")[0];
         const formattedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
@@ -1112,7 +1112,7 @@
         const welcomeEl = document.querySelector(".welcome-name");
         if (welcomeEl) { welcomeEl.textContent = `| Welcome, ${formattedName} 👋`; }
 
- 
+
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('sidebarOverlay');
         const openSidebarBtn = document.getElementById('openSidebar');
@@ -1125,7 +1125,7 @@
         closeSidebarBtn.addEventListener('click', closeSidebar);
         overlay.addEventListener('click', closeSidebar);
 
- 
+
         const menuLinks = document.querySelectorAll('.sidebar-menu .menu-link');
         const views = document.querySelectorAll('.view-section');
         const pageTitle = document.getElementById('page-title');
@@ -1141,7 +1141,7 @@
                 const targetId = this.getAttribute('data-target');
                 document.getElementById(targetId).classList.add('active');
 
- 
+
                 let titleText = this.innerText.trim();
                 pageTitle.innerHTML = `${titleText} <span class="welcome-name">| Admin</span>`;
 
@@ -1150,7 +1150,7 @@
             });
         });
 
- 
+
         const ctx = document.getElementById('volumeChart').getContext('2d');
         const volumeChart = new Chart(ctx, {
             type: 'line',
@@ -1176,7 +1176,7 @@
             }
         });
 
- 
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) { entry.target.classList.add('show'); }
@@ -1192,9 +1192,9 @@
         }
         triggerAnimations();
 
- 
- 
- 
+
+
+
         document.getElementById('dispatchForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -1209,7 +1209,7 @@
 
             let isValid = true;
 
- 
+
             trackingInput.classList.remove('input-error');
             serviceSelect.classList.remove('input-error');
             prioritySelect.classList.remove('input-error');
@@ -1218,28 +1218,28 @@
             priorityError.style.display = 'none';
             formSuccess.style.display = 'none';
 
- 
+
             if (trackingInput.value.trim().length < 5) {
                 trackingInput.classList.add('input-error');
                 trackingError.style.display = 'block';
                 isValid = false;
             }
 
- 
+
             if (serviceSelect.value === '') {
                 serviceSelect.classList.add('input-error');
                 serviceError.style.display = 'block';
                 isValid = false;
             }
 
- 
+
             if (prioritySelect.value === '') {
                 prioritySelect.classList.add('input-error');
                 priorityError.style.display = 'block';
                 isValid = false;
             }
 
- 
+
             if (isValid) {
                 const btn = this.querySelector('button');
                 btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
@@ -1249,7 +1249,7 @@
                     btn.innerHTML = 'Generate Label & Dispatch <i class="fa-solid fa-barcode"></i>';
                     this.reset();
 
- 
+
                     setTimeout(() => formSuccess.style.display = 'none', 3000);
                     window.location.href = '404.html'
                 }, 500);
