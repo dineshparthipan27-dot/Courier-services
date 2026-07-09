@@ -491,6 +491,10 @@ body {
         display: none;
     }
 
+    .back-link{
+        top: -30px;
+    }
+
 
 }
 
