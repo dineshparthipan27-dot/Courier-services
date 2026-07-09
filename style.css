@@ -293,9 +293,7 @@
   color: #4CAF50;
 }
 
-/* ===============================
-   Mobile Responsiveness
-=============================== */
+
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2.5rem;
@@ -351,9 +349,7 @@
   }
 }
 
-/* ===============================
-   Premium Services Section Styling (Animated)
-=============================== */
+
 .services {
   padding: 100px 5%;
   background-color: #F8F9FA;
@@ -495,9 +491,7 @@
   letter-spacing: 2px;
 }
 
-/* ===============================
-   How We Work (Process) Styling
-=============================== */
+
 .process-section {
   padding: 100px 5%;
   background-color: #ffffff;
@@ -619,9 +613,7 @@
   animation-play-state: paused;
 }
 
-/* ===============================
-   Mobile Responsiveness for Process
-=============================== */
+
 @media (max-width: 768px) {
   .process-container {
     flex-direction: column;
@@ -668,9 +660,7 @@
   }
 }
 
-/* ===============================
-   Why Choose Us Styling (Dark Section)
-=============================== */
+
 .why-us-section {
   padding: 100px 5%;
   background-color: #0A192F;
@@ -759,9 +749,7 @@
   line-height: 1.6;
 }
 
-/* ===============================
-   Background Decorative Elements (Optional Magic)
-=============================== */
+
 .why-us-section::before {
   content: '';
   position: absolute;
@@ -788,9 +776,6 @@
   z-index: 0;
 }
 
-/* ===============================
-   Mobile Responsiveness
-=============================== */
 @media (max-width: 768px) {
   .why-us-section {
     padding: 80px 5%;
@@ -801,9 +786,6 @@
   }
 }
 
-/* ===============================
-   Advanced Estimator Section
-=============================== */
 .estimator-section {
   padding: 100px 5%;
   background-color: #F4F7FB;
@@ -1138,9 +1120,7 @@
   }
 }
 
-/* ===============================
-   Premium Global Reach (Dark Theme)
-=============================== */
+
 .reach-section-dark {
   padding: 100px 5%;
   background-color: #050c18;
@@ -1364,9 +1344,7 @@
   }
 }
 
-/* ===============================
-   Real-Time Fleet Styling
-=============================== */
+
 .fleet-section {
   padding: 100px 5%;
   background-color: #F8F9FA;
@@ -1567,9 +1545,7 @@
   }
 }
 
-/* ===============================
-   Premium Infinite Marquee Wall
-=============================== */
+
 .premium-testimonials {
   padding: 100px 0;
   background-color: #F8F9FA;
@@ -1739,9 +1715,7 @@
   }
 }
 
-/* ===============================
-   Partner With Us (B2B CTA) Styling
-=============================== */
+
 .b2b-cta-section {
   padding: 120px 5%;
   background-color: #0A192F;

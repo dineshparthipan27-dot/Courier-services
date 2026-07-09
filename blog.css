@@ -1,6 +1,4 @@
-/* ===============================
-   Blog Hero Section Styling
-=============================== */
+
 .blog-hero {
   position: relative;
   min-height: 80vh;
@@ -184,9 +182,7 @@
   font-size: 1rem;
 }
 
-/* ===============================
-   Search Box Validation Styles
-=============================== */
+
 .blog-search-box.error-border {
   border-color: #ff3333 !important;
   box-shadow: 0 0 15px rgba(255, 51, 51, 0.4) !important;
@@ -248,9 +244,7 @@
   }
 }
 
-/* ===============================
-   Featured Article Styling
-=============================== */
+
 .featured-blog-section {
   padding: 80px 5%;
   background-color: #F8F9FA;
@@ -485,9 +479,7 @@
 
 
 
-/* ===============================
-   Advanced Animated Blog Grid
-=============================== */
+
 .blog-grid-section {
   padding: 80px 5%;
   background-color: #ffffff;
@@ -729,9 +721,7 @@
   }
 }
 
-/* ===============================
-   Newsletter Subscription Styling
-=============================== */
+
 .newsletter-section {
   position: relative;
   padding: 100px 5%;
@@ -939,9 +929,6 @@
   color: #4CAF50;
 }
 
-/* ===============================
-   Newsletter Form Layout Fixes
-=============================== */
 .newsletter-form1 {
   max-width: 600px;
   margin: 0 auto 20px;
@@ -1090,9 +1077,7 @@
   }
 }
 
-/* ===============================
-   Trending / Most Read Section
-=============================== */
+
 .trending-section {
   padding: 100px 5%;
   background-color: #F8F9FA;
@@ -1411,9 +1396,7 @@
   }
 }
 
-/* ===============================
-   Final Blog CTA Styling
-=============================== */
+
 .blog-cta-section {
   position: relative;
   padding: 120px 5%;
@@ -1594,9 +1577,7 @@
   }
 }
 
-/* ===============================
-   Podcast & Audio Section Styling
-=============================== */
+
 .blog-podcast-section {
   padding: 100px 5%;
   background-color: #ffffff;

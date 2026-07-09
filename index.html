@@ -113,9 +113,7 @@
     </div>
   </section>
 
-  <!-- ===============================
-       How We Work (The Process) Section
-  =============================== -->
+  
   <section id="process" class="process-section">
 
 
@@ -197,9 +195,7 @@
     </div>
   </section>
 
-  <!-- ===============================
-       Advanced Shipping Fare Estimator
-  =============================== -->
+  
   <section id="estimator" class="estimator-section">
     <div class="container">
 
@@ -304,9 +300,7 @@
     </div>
   </section>
 
-  <!-- ===============================
-       Global Reach (Premium Command Center)
-  =============================== -->
+  
   <section id="reach" class="reach-section-dark">
     <div class="container">
 
@@ -638,9 +632,7 @@
     </div>
   </section>
 
-  <!-- ===============================
-       Footer Section
-  =============================== -->
+ 
   <footer class="footer-section">
     <div class="container">
 
@@ -719,9 +711,7 @@
 
 
   <script>
-    /* ===============================
-   Typewriter Effect Logic
-=============================== */
+  
     const phrases = ["Track shipments in real-time.", "Lowest shipping rates guaranteed.", "Safe, secure, and on time."];
     let i = 0;
     let j = 0;
@@ -748,7 +738,7 @@
 
           if (j == phrases[i].length) {
             isDeleting = true;
-            setTimeout(loop, 1500); // Wait before deleting
+            setTimeout(loop, 1500); 
             return;
           }
 
@@ -756,7 +746,7 @@
             currentPhrase = [];
             isDeleting = false;
             i++;
-            if (i == phrases.length) { i = 0; } // Loop back to first phrase
+            if (i == phrases.length) { i = 0; } 
           }
         }
         const speed = isDeleting ? 50 : 100;
@@ -766,7 +756,7 @@
 
 
     document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(loop, 1500); // Delay start slightly
+      setTimeout(loop, 1500); 
     });
 
 
@@ -794,13 +784,13 @@
         if (trackingId === '') {
           trackMessage.textContent = '⚠️ Please enter a Tracking ID!';
           trackMessage.classList.add('show', 'msg-error');
-          trackContainer.classList.add('shake-anim'); // Box shake aagum
+          trackContainer.classList.add('shake-anim'); 
         }
 
         else if (trackingId.length < 6) {
           trackMessage.textContent = '⚠️ Tracking ID must be at least 6 characters long!';
           trackMessage.classList.add('show', 'msg-error');
-          trackContainer.classList.add('shake-anim'); // Box shake aagum
+          trackContainer.classList.add('shake-anim'); 
         }
 
         else {
@@ -816,16 +806,14 @@
           setTimeout(() => {
             trackBtn.textContent = 'Track Now';
             trackBtn.style.opacity = '1';
-            trackInput.value = ''; // clear input field
-            trackMessage.classList.remove('show'); // hide message
+            trackInput.value = '';
+            trackMessage.classList.remove('show'); 
           }, 3000);
         }
       });
     }
 
-    /* ===============================
-       Advanced Estimator Form Validation & Math Logic
-    =============================== */
+    
     document.addEventListener("DOMContentLoaded", () => {
       const weightSlider = document.getElementById('advWeight');
       const weightDisplay = document.getElementById('weightDisplay');
@@ -935,9 +923,7 @@
       }
     });
 
-    /* ===============================
-       Live Number Counter Animation
-    =============================== */
+   
     document.addEventListener("DOMContentLoaded", () => {
       const counters = document.querySelectorAll('.counter');
       const speed = 100; // The lower the slower
@@ -957,26 +943,24 @@
 
               if (count < target) {
                 counter.innerText = Math.ceil(count + inc);
-                setTimeout(updateCount, 20); // 20ms delay
+                setTimeout(updateCount, 20); 
               } else {
-                counter.innerText = target; // Ensure it ends exactly on target
+                counter.innerText = target; 
               }
             };
 
             updateCount();
-            observer.unobserve(counter); // Run only once
+            observer.unobserve(counter); 
           }
         });
-      }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+      }, { threshold: 0.5 }); 
 
       counters.forEach(counter => {
         counterObserver.observe(counter);
       });
     });
 
-    /* ===============================
-       Fleet Section Number Counters
-    =============================== */
+   
     document.addEventListener("DOMContentLoaded", () => {
       const fleetCounters = document.querySelectorAll('.fleet-counter');
 
@@ -1002,10 +986,10 @@
             };
 
             updateCount();
-            observer.unobserve(counter); // Stop observing once counted
+            observer.unobserve(counter);
           }
         });
-      }, { threshold: 0.5 }); // Starts when half the card is visible
+      }, { threshold: 0.5 }); 
 
       fleetCounters.forEach(counter => {
         fleetObserver.observe(counter);

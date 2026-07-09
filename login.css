@@ -1,6 +1,4 @@
-/* ===============================
-   Premium Split-Screen Auth Styling
-=============================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 * {
@@ -23,9 +21,7 @@ body {
     width: 100%;
 }
 
-/* ===============================
-   LEFT: Cinematic Banner
-=============================== */
+
 .auth-banner {
     flex: 1.2;
     position: relative;
@@ -188,9 +184,7 @@ body {
     }
 }
 
-/* ===============================
-   RIGHT: Form Area
-=============================== */
+
 .auth-form-area {
     flex: 1;
     background: #ffffff;

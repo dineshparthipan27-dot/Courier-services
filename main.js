@@ -28,9 +28,7 @@ links.forEach(link => {
   });
 });
 
-/* ===============================
-   Footer Newsletter Validation
-=============================== */
+
 document.addEventListener("DOMContentLoaded", () => {
   const newsForm = document.getElementById('newsletterForm');
   const newsEmail = document.getElementById('newsletterEmail');
@@ -39,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (newsForm) {
     newsForm.addEventListener('submit', (e) => {
-      e.preventDefault(); // Form submit aagi page reload aagaratha thadukkum
+      e.preventDefault(); 
 
       const emailVal = newsEmail.value.trim();
 
@@ -78,9 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         setTimeout(() => {
-          newsEmail.value = ''; // clear input
+          newsEmail.value = '';
           newsMsg.classList.remove('show');
-          newsBtn.innerHTML = originalBtnText; // Back to arrow
+          newsBtn.innerHTML = originalBtnText; 
           newsBtn.style.backgroundColor = originalBtnColor;
         }, 3000);
       }

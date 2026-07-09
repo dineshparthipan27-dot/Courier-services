@@ -1,6 +1,4 @@
-/* ===============================
-   Services Hero Section Styling
-=============================== */
+
 .services-hero {
   position: relative;
   min-height: 85vh;
@@ -352,9 +350,6 @@
   }
 }
 
-/* ===============================
-   Core Offerings Styling
-=============================== */
 .core-srv-section {
   padding: 120px 5%;
   background-color: #0A192F;
@@ -554,9 +549,6 @@
   }
 }
 
-/* ===============================
-   Industry Specific Solutions Styling
-=============================== */
 .industry-section {
   padding: 120px 5%;
   background-color: #ffffff;
@@ -775,9 +767,7 @@
   }
 }
 
-/* ===============================
-   How We Deliver Styling
-=============================== */
+
 .process-section {
   padding: 120px 5%;
   background-color: #F8F9FA;
@@ -979,9 +969,7 @@
   }
 }
 
-/* ===============================
-   Technology & Tracking Styling
-=============================== */
+
 .tech-section {
   padding: 120px 5%;
   background-color: #030712;
@@ -1188,9 +1176,7 @@
   }
 }
 
-/* ===============================
-   Pricing Section Styling
-=============================== */
+
 .pricing-section {
   padding: 120px 5%;
   background-color: #030712;
@@ -1342,9 +1328,7 @@
   box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
 }
 
-/* ===============================
-   Services Final CTA Styling
-=============================== */
+
 .srv-cta-section {
   padding: 100px 5%;
   background: linear-gradient(135deg, #FF5722 0%, #e64a19 100%);

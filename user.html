@@ -15,9 +15,7 @@
         rel="stylesheet">
 
     <style>
-        /* ===============================
-           SpeedX Premium Theme Variables
-        =============================== */
+        
         :root {
             --primary-orange: #FF5722;
             --primary-orange-light: rgba(255, 87, 34, 0.1);
@@ -56,9 +54,6 @@
             width: 100%;
         }
 
-        /* ===============================
-           Layout & Sidebar
-        =============================== */
         .dashboard-container {
             display: flex;
             min-height: 100vh;
@@ -180,9 +175,7 @@
             border-right: 4px solid #ef4444;
         }
 
-        /* ===============================
-           Main Content & Header
-        =============================== */
+        
         .main-content {
             flex: 1;
             display: flex;
@@ -277,9 +270,6 @@
             border: 2px solid var(--primary-orange);
         }
 
-        /* ===============================
-           View Sections & Animations
-        =============================== */
         .view-section {
             display: none;
             padding: 40px;
@@ -330,9 +320,7 @@
             transform: translateY(0);
         }
 
-        /* ===============================
-           Stats & Content Boxes
-        =============================== */
+        
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -406,9 +394,7 @@
             width: 100%;
         }
 
-        /* ===============================
-           Track Package & Stepper
-        =============================== */
+        
         .tracking-search-box {
             display: flex;
             gap: 15px;
@@ -573,9 +559,7 @@
             }
         }
 
-        /* ===============================
-           Forms & Inputs
-        =============================== */
+       
         .form-row {
             display: flex;
             gap: 20px;
@@ -667,9 +651,7 @@
             box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
         }
 
-        /* ===============================
-           Tables (Fully Responsive)
-        =============================== */
+       
         .shipment-header-wrapper {
             display: flex;
             justify-content: space-between;
@@ -776,9 +758,7 @@
             color: var(--navy-light);
         }
 
-        /* ===============================
-           100% Mobile Responsiveness Fixes
-        =============================== */
+       
         @media (max-width: 1024px) {
             .sidebar {
                 transform: translateX(-100%);
@@ -1023,9 +1003,7 @@
                 </div>
             </header>
 
-            <!-- ===============================
-                 VIEW 1: DASHBOARD OVERVIEW
-            =============================== -->
+           
             <div id="dashboard-view" class="view-section active">
                 <section class="stats-grid scroll-anim">
                     <div class="stat-card">
@@ -1101,9 +1079,7 @@
                 </div>
             </div>
 
-            <!-- ===============================
-                 VIEW 2: TRACK PACKAGE
-            =============================== -->
+     
             <div id="track-view" class="view-section">
                 <section class="content-box scroll-anim">
                     <h2 class="section-title"><i class="fa-solid fa-map-location-dot"></i> Track Your Shipment</h2>
@@ -1153,9 +1129,7 @@
                 </section>
             </div>
 
-            <!-- ===============================
-                 VIEW 3: SCHEDULE PICKUP
-            =============================== -->
+           
             <div id="pickup-view" class="view-section">
                 <section class="content-box scroll-anim" style="max-width: 800px; margin: 0 auto;">
                     <h2 class="section-title"><i class="fa-solid fa-calendar-plus"></i> Schedule a Pickup</h2>
@@ -1226,9 +1200,7 @@
                 </section>
             </div>
 
-            <!-- ===============================
-                 VIEW 4: MY SHIPMENTS
-            =============================== -->
+            
             <div id="shipments-view" class="view-section">
                 <section class="content-box scroll-anim">
                     <div class="shipment-header-wrapper">
@@ -1295,9 +1267,7 @@
         </main>
     </div>
 
-    <!-- ===============================
-         JAVASCRIPT LOGIC
-    =============================== -->
+    
     <script>
 
         const emailValue = localStorage.getItem("UserMail") || "david.smith@company.com";

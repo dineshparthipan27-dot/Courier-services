@@ -1,6 +1,4 @@
-/* ===============================
-   About Us - Hero Section Styling
-=============================== */
+
 .about-hero-section {
   position: relative;
   min-height: 90vh;
@@ -338,9 +336,7 @@
   }
 }
 
-/* ===============================
-   Our Journey (Timeline) Styling
-=============================== */
+
 .timeline-section {
   padding: 100px 5%;
   background-color: #F8F9FA;
@@ -497,9 +493,7 @@
   .timeline-item.left .timeline-content {}
 }
 
-/* ===============================
-   Mission & Vision Styling
-=============================== */
+
 .mv-section {
   padding: 100px 5%;
   background-color: #030712;
@@ -676,9 +670,6 @@
   }
 }
 
-/* ===============================
-   Core Values Styling
-=============================== */
 .values-section {
   padding: 100px 5%;
   background-color: #F8F9FA;
@@ -781,9 +772,7 @@
   }
 }
 
-/* ===============================
-   Infrastructure & Tech Styling
-=============================== */
+
 .infra-section {
   padding: 120px 5%;
   background-color: #0A192F;
@@ -972,9 +961,6 @@
   line-height: 1.6;
 }
 
-/* ===============================
-   Meet the Leadership Styling
-=============================== */
 .leadership-section {
   padding: 100px 5%;
   background-color: #ffffff;
@@ -1150,9 +1136,7 @@
   }
 }
 
-/* ===============================
-   Final CTA Section Styling
-=============================== */
+
 .about-cta-section {
   position: relative;
   padding: 100px 5%;

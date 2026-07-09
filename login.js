@@ -1,6 +1,4 @@
-/* ===============================
-   Premium Auth Logic
-=============================== */
+
 
 const btnLogin = document.getElementById('btnShowLogin');
 const btnSignup = document.getElementById('btnShowSignup');
@@ -118,25 +116,23 @@ signupForm.addEventListener("submit", (e) => {
         btn.innerHTML = btn.dataset.original;
         btn.disabled = false;
         signupForm.reset();
-        btnLogin.click(); // Switch back to login tab
+        btnLogin.click();
     }, 1500);
 });
 
-// ===============================
-// Password Toggle Logic (Fixed)
-// ===============================
+
 document.querySelectorAll(".toggle-pwd").forEach(icon => {
     icon.addEventListener("click", () => {
-        // Find the input field inside the same input-group
+
         const input = icon.closest('.input-group').querySelector('input');
-        
+
         if (input.type === "password") {
-            input.type = "text"; 
+            input.type = "text";
             icon.classList.replace("fa-eye-slash", "fa-eye");
         } else {
-            input.type = "password"; 
-           
-             icon.classList.replace("fa-eye", "fa-eye-slash");
+            input.type = "password";
+
+            icon.classList.replace("fa-eye", "fa-eye-slash");
         }
     });
 });
